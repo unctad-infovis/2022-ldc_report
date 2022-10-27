@@ -18,13 +18,31 @@
   .header_container {
     align-items: center;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     height: 100vh;
     justify-content: center;
     position: relative;
     h2 {
+      text-align: center;
+      text-transform: uppercase;
       font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-size: 40px;
+      font-size: 60px;
+      margin: 0 0 20px 0;
+    }
+    h3 {
+      font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 30px;
+      text-align: center;
+      margin: 0 0 5px 0;
+      padding: 2px 5px;
+      background-color: @unblue;
+      color: #fff;
+    }
+    h4 {
+      font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 26px;
+      margin: 0 0 20px 0;
+      text-align: center;
     }
     @import 'arrows.less';
   }
