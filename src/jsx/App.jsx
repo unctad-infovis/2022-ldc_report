@@ -111,13 +111,13 @@ function App() {
                 </p>
               )}
             </IsVisible>
-            <p className="ingress">
-              International support for LDCs is critical to address intertwined challenges that threaten their development and make them pay a disproportionately high price in addressing climate change.
-            </p>
+            <p className="ingress" />
             <IsVisible once>
               {(isVisible) => (
                 <p className="ingress">
-                  <span className={`highlight ${(isVisible) ? 'visible' : ''}`} />
+                  <span className={`highlight ${(isVisible) ? 'visible' : ''}`}>International support</span>
+                  {' '}
+                  for LDCs is critical to address intertwined challenges that threaten their development and make them pay a disproportionately high price in addressing climate change.
                 </p>
               )}
             </IsVisible>
@@ -130,7 +130,7 @@ function App() {
       <div className="section_wrapper">
         <ProgressIndicator appRef={appRef} section1Progress={section1Progress} section2Progress={section2Progress} section3Progress={section3Progress} section4Progress={section4Progress} />
         <div ref={section1} className="section_1_container">
-          <PhotoHeadline img="" max_width={560} text_upper="Most LDCs are highly dependant in single commodity" text_lower="Vulnerable economies" />
+          <PhotoHeadline img="" max_width={560} text_upper="Most LDCs depend in single commodity" text_lower="Vulnerable economies" />
           <div className="two_column_layout">
             <div className="left_column">
               <div className="text_container">
