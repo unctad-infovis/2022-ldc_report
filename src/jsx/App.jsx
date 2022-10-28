@@ -101,23 +101,24 @@ function App() {
         <div className="left_column">
           <div className="text_container">
             <p className="ingress">
-              UNCTAD’s Least Developed Countries Report 2022 published on 3 November says LDCs are the “litmus test” against which history will judge how effectively efforts to make the low-carbon transition consider development needs and countries’ different obligations and capacities to fight climate change.
+              There are currently 46 economies designated by the UN as the least developed countries (LDCs), entitling them to preferential market access, aid, technological capabilities-building and special technical assistance, among other concessions and international support measures.
             </p>
             <IsVisible once>
               {(isVisible) => (
                 <p className="ingress">
-                  The world’s 46 least developed countries (LDC), home to about 1.1 billion people, have contributed minimally to CO2 emissions. In 2019 they accounted for less than 4% of total world greenhouse gas emissions. Yet over the last 50 years, 69% of worldwide deaths caused by climate-related disasters occurred in LDCs.
+                  UNCTAD’s Least Developed Countries Report 2022 published on 3 November says LDCs are the “litmus test” against which history will judge how effectively efforts to make the low-carbon transition consider development needs and countries’ different obligations and capacities to fight climate change.
                   <span className={`highlight ${(isVisible) ? 'visible' : ''}`} />
                 </p>
               )}
             </IsVisible>
-            <p className="ingress" />
+            <p className="ingress">
+              Home to about 1.1 billion people or 14% of the global population, LDCs have contributed minimally to CO2 emissions. In 2019 they accounted for less than 4% of total world greenhouse gas emissions. Yet over the last 50 years, 69% of worldwide deaths caused by climate-related disasters occurred in LDCs.
+            </p>
             <IsVisible once>
               {(isVisible) => (
                 <p className="ingress">
-                  <span className={`highlight ${(isVisible) ? 'visible' : ''}`}>International support</span>
-                  {' '}
-                  for LDCs is critical to address intertwined challenges that threaten their development and make them pay a disproportionately high price in addressing climate change.
+                  <span className={`highlight ${(isVisible) ? 'visible' : ''}`} />
+                  International support for this group of the world’s most vulnerable economies is critical to address intertwined challenges that threaten their development, challenge their participation in global trade and make them pay a disproportionately high price in addressing climate change.
                 </p>
               )}
             </IsVisible>
@@ -130,7 +131,7 @@ function App() {
       <div className="section_wrapper">
         <ProgressIndicator appRef={appRef} section1Progress={section1Progress} section2Progress={section2Progress} section3Progress={section3Progress} section4Progress={section4Progress} />
         <div ref={section1} className="section_1_container">
-          <PhotoHeadline img="" max_width={560} text_upper="Most LDCs depend in single commodity" text_lower="Vulnerable economies" />
+          <PhotoHeadline img="" max_width={560} text_upper="Commodity trap heightens" text_lower="LDCs’ vulnerability" />
           <div className="two_column_layout">
             <div className="left_column">
               <div className="text_container">
@@ -142,11 +143,11 @@ function App() {
                     </p>
                   )}
                 </IsVisible>
-                <p>Between 2018 and 2020, some 80% of the LDCs were classified as commodity-dependent, meaning more than 60% of their merchandise exports consisted of primary products.</p>
+                <p>Between 2018 and 2020, some 80% of the LDCs were classified as commodity-dependent, meaning more than 60% of their merchandise exports consisted of primary products. In the global low-carbon transition, these countries could face severe fiscal constraints and loss of economic output should the extraction of such commodities suffer a steep cutback.</p>
                 <IsVisible once>
                   {(isVisible) => (
                     <p>
-                      Therefore, the global drive to reduce carbon emissions may adversely affect LDC export sectors, the report warns. The more than two thirds of LDCs whose economies depend on the export of high-carbon-emitting commodities could face severe fiscal constraints and loss of economic output should the extraction of such commodities suffer a steep cutback.
+                      The vulnerability caused by LDCs’ narrow export bases and high dependence on food imports has been compounded by the impacts of the war in Ukraine on global markets and the COVID-19 pandemic, which pushed an additional 32 million people in LDCs into extreme poverty (living on less than $1.90 a day) in 2020 alone.
                       <span className={`highlight ${(isVisible) ? 'visible' : ''}`} />
                     </p>
                   )}
@@ -158,62 +159,52 @@ function App() {
             </div>
             <div className="right_column">
               TODO: graph about commodity dependency
-              <Recommendations headline="UNCTAD calls for" recommendation_list={['1', '2', '3']} />
+              <Recommendations headline="UNCTAD calls on" recommendation_list={['LDCs to promote domestic value addition and stronger inter-sectoral production linkages to build their productive capacities to redress the underdevelopment resulting from the commodity-dependence trap.', 'LDCs to pursue a “green structural transformation” to reduce poverty and enhance their resilience to better manage, adapt and respond to climate risks. A green structural transformation involves a transition from carbon-intensive “sunset” sectors to low-carbon “sunrise” economic activities.', 'LDCs to adopt “green industrial policies” that accelerate the transition from carbon-intensive to low-carbon industries. This entails promoting the adoption of green technology and innovation and building an environment conducive to technological upgrading and broader innovation.', 'LDCs to use public procurement policies to accelerate a “green structural transformation” and induce national producers to switch to “cleaner” technologies and products, and consumers to behave in a more environmentally conscious way.', 'LDCs to strengthen their capacities to mobilize domestic resources to help finance their low-carbon transition. This will involve revamping taxation, making a more strategic use of their financial and banking systems, and redoubling efforts to reduce and eventually eliminate illicit financial flows.']} />
             </div>
           </div>
         </div>
         <div ref={section2} className="section_2_container">
-          <PhotoHeadline img="" text_upper="Need to boost resilience to climate risks" text_lower="Green transformation" />
+          <PhotoHeadline img="" text_upper="Compliance with trading partners’" text_lower="policies raises new challenges for LDCs" />
           <div className="two_column_layout">
             <div className="left_column">
               <div className="text_container">
                 <IsVisible once>
                   {(isVisible) => (
                     <p>
-                      The report calls for a “green structural transformation” to reduce poverty in LDCs and enhance their resilience to better manage, adapt and respond to climate risks.
+                      LDCs, which are marginalized in global trade, may now face additional headwinds because of the environmental policies of their trade partners.
                       <span className={`highlight ${(isVisible) ? 'visible' : ''}`} />
                     </p>
                   )}
                 </IsVisible>
-                <p>Structural transformation means a transition from low-productivity, labour-intensive production to higher-value-added and higher-productivity economic activities.</p>
-                <p>A green structural transformation combines economically, socially and environmentally responsible growth and structural economic transformation. It consists of a transition from carbon-intensive “sunset” sectors to low-carbon “sunrise” economic activities, promoting the efficient use of resources (materials, energy, land, water) along the development path.</p>
-                <p>UNCTAD says a green structural transformation is a paramount policy objective for LDCs – and many other (non-LDC) developing countries – because it combines their development imperatives with climate considerations.</p>
-                <p>The report raises concern that LDCs, which are marginalized in global trade, now face additional headwinds because of the environmental policies of their trade partners.</p>
-                <p>Any trade partners’ policies targeting the carbon emissions generated in the production of exported goods could have a strong dampening impact on LDC exports, even indirectly if LDCs are exempted. </p>
-                <IsVisible once>
-                  {(isVisible) => (
-                    <p>
-                      UNCTAD urges the international community to consider the interests of LDCs and avoid policy measures that limit these countries’ policy space and increase the likelihood of pollution havens emerging among them.
-                      <span className={`highlight ${(isVisible) ? 'visible' : ''}`} />
-                    </p>
-                  )}
-                </IsVisible>
+                <p>Any trade partners’ policies targeting the carbon emissions generated in the production of exported goods could have a strong dampening impact on LDC exports, even indirectly if LDCs were to be exempted.</p>
+                <p>Such policies could have serious consequences if they were to provide an incentive to displacing polluting industries out of developed countries and into LDCs as a way for the former countries to meet their commitments to reduce CO2 emissions – this is known as carbon leakage.</p>
               </div>
             </div>
             <div className="right_column">
               TODO: graph about green transformation
-              <Recommendations headline="UNCTAD calls for" recommendation_list={['1', '2', '3']} />
+              <Recommendations headline="UNCTAD calls on" recommendation_list={['The international community to consider the interests of LDCs and avoid policy measures that limit these countries’ policy space, slow their development, and increase the likelihood of pollution havens emerging among them. ', 'LDCs to intensify intra-regional trade and cooperation with neighboring countries and improve the quality and diversity of their products and infrastructure to unlock intra-regional trade.', 'LDC development partners and LDCs to strengthen the synergies between South-South cooperation and North-South cooperation on the low-carbon transition of LDCs.']} />
             </div>
           </div>
         </div>
         <div ref={section3} className="section_3_container">
-          <PhotoHeadline img="" text_upper="LDCs need technology transfer and capacity building" text_lower="More finance" />
+          <PhotoHeadline img="" text_upper="LDCs need more international support" text_lower="climate finance, technology transfer and productive capacity-building" />
           <div className="two_column_layout">
             <div className="left_column">
               <div className="text_container">
                 <IsVisible once>
                   {(isVisible) => (
                     <p>
-                      UNCTAD urges development partners to extend special and differential treatment to LDCs by providing targeted, sufficiently flexible and long-term finance. This entails fulfilling their climate finance commitments and raising their level of ambition on financing targets.
+                      LDCs account for about 22% of countries with the most recurring appeals for funds in reaction to extreme weather crises.
                       <span className={`highlight ${(isVisible) ? 'visible' : ''}`} />
                     </p>
                   )}
                 </IsVisible>
-                <p>This should ideally be additional to funds from donor countries fulfilling their commitment to provide official development assistance to LDCs corresponding to 0.15% to 0.20% of donors’ gross national income.</p>
-                <p>In addition, urgent steps are needed to enhance technology transfer to LDCs and boost their institutional capacities by vastly scaling up technical assistance and capacity-building support to all areas of the low-carbon transition, including data and statistical capabilities.</p>
+                <p>Despite an urgent plea from climate-vulnerable countries, there remains no international agreement on financing costs related to loss and damage from fast-onset events related to climate change.</p>
+                <p>Climate risks are aggravated by the failure of developed countries to meet the annual $100 billion goal in climate finance they originally promised to achieve by 2020 to support developing nations to adapt to the climate crisis.</p>
                 <IsVisible once>
                   {(isVisible) => (
                     <p>
+                      Climate adaptation has received far less international support than mitigation, not only in terms of financing, but also in terms of technology development and transfer, capacity development and technical assistance.
                       <span className={`highlight ${(isVisible) ? 'visible' : ''}`} />
                     </p>
                   )}
@@ -222,46 +213,47 @@ function App() {
             </div>
             <div className="right_column">
               TODO: graph
-              <Recommendations headline="UNCTAD calls for" recommendation_list={['1', '2', '3']} />
+              <Recommendations headline="UNCTAD calls on" recommendation_list={['The international community to “reboot” its support for LDCs by fulfilling climate funding commitments and extending special and differential treatment to LDCs by providing targeted, sufficiently flexible and long-term finance. Climate finance to LDCs should ideally be additional to funds from donor countries fulfilling their commitment to provide official development assistance to LDCs corresponding to 0.15% to 0.20% of donors’ gross national income.', 'Advanced economies to enhance technology transfer to LDCs, especially of green technologies.', 'Advanced countries to boost the institutional capacities of LDCs by vastly scaling up technical assistance and capacity-building support to all areas of the low-carbon transition, including climate, development and economic policymaking capabilities.']} />
             </div>
           </div>
         </div>
         <div ref={section4} className="section_4_container">
-          <PhotoHeadline img="" text_upper="LDCs need to put in better taxation" text_lower="Better domestic policies" />
+          <PhotoHeadline img="" text_upper="LDCs" text_lower="Encyplopedia" />
           <div className="two_column_layout">
             <div className="left_column">
               <div className="text_container">
+                <h3>Where are LDCs located?</h3>
                 <IsVisible once>
                   {(isVisible) => (
                     <p>
-                      The report says green industrial policies need to include measures to expand the development of local entrepreneurship, increase science, technology and innovation skills, enhance productive capacities, promote research and development, and provide supportive infrastructure.
+                      The UN established the LDC category 51 years ago. The list of LDCs has expanded from an initial 25 countries in 1971, peaking at 52 in 1991, and stands at 46 today, with only six countries having graduated – stopped being an LDC – to date.
                       <span className={`highlight ${(isVisible) ? 'visible' : ''}`} />
                     </p>
                   )}
                 </IsVisible>
-                <p>LDCs can also use public procurement policies to accelerate green structural transformation and induce positive change by economic actors and consumers.</p>
-                <p>They should also strengthen their capacities to mobilize domestic resources to help finance their low-carbon transition, since their development financing needs far exceed their official development assistance.</p>
-                <p>The report says this will involve revamping taxation, redoubling efforts to reduce and eventually eliminate illicit financial flows and retrofitting the roles of public development banks and central banks.</p>
-                <IsVisible once>
-                  {(isVisible) => (
-                    <p>
-                      <span className={`highlight ${(isVisible) ? 'visible' : ''}`} />
-                    </p>
-                  )}
-                </IsVisible>
-                <IsVisible once>
-                  {(isVisible) => (
-                    <p>
-                      <span className={`highlight ${(isVisible) ? 'visible' : ''}`} />
-                    </p>
-                  )}
-                </IsVisible>
+                <p>They are distributed among the following regions:</p>
+                <ul>
+                  <li>Africa (33): Angola, Benin, Burkina Faso, Burundi, Central African Republic, Chad, Comoros, Democratic Republic of the Congo, Djibouti, Eritrea, Ethiopia, Gambia, Guinea, Guinea-Bissau, Lesotho, Liberia, Madagascar, Malawi, Mali, Mauritania, Mozambique, Niger, Rwanda, Sao Tome and Principe, Senegal, Sierra Leone, Somalia, South Sudan, Sudan, Togo, Uganda, United Republic of Tanzania and Zambia.</li>
+                  <li>Asia (9): Afghanistan, Bangladesh, Bhutan, Cambodia, Lao People’s Democratic Republic, Myanmar, Nepal, Timor-Leste and Yemen.</li>
+                  <li>Caribbean (1): Haiti.</li>
+                  <li>Pacific (3): Kiribati, Solomon Islands and Tuvalu.</li>
+                </ul>
+                <h3>How do countries ‘graduate’ from least developed country status?</h3>
+                <p>The list of LDCs is reviewed every three years by the Committee for Development Policy (CDP), a group of independent experts who report to the UN Economic and Social Council (ECOSOC). Following a triennial review of the list, the CDP may recommend to ECOSOC, countries for addition to the list or graduation from LDC status.</p>
+                <p>To graduate from the LDC category, a country must meet the established graduation thresholds of at least two of the three criteria for two consecutive triennial reviews: namely: (i) income per capita, (ii) an index of human assets, and (iii) an index of economic and environmental vulnerability.</p>
+                <p>Countries that are highly vulnerable, or have very low human assets, are eligible for graduation only if they meet the other two criteria by a sufficiently high margin. As an exception, a country whose per capita income is sustainably above the “income-only” graduation threshold, set at twice the graduation threshold ($2,444 at the 2021 triennial review), becomes eligible for graduation, even if it fails to meet the other two criteria.</p>
+                <p>The six countries that have graduated from least developed country status since the creation of the category are:</p>
+                <ol>
+                  <li>Botswana in December 1994</li>
+                  <li>Cabo Verde in December 2007</li>
+                  <li>Maldives in January 2011</li>
+                  <li>Samoa in January 2014</li>
+                  <li>Equatorial Guinea in June 2017</li>
+                  <li>Vanuatu in December 2020</li>
+                </ol>
               </div>
             </div>
-            <div className="right_column">
-              TODO: graph
-              <Recommendations headline="UNCTAD calls for" recommendation_list={['1', '2']} />
-            </div>
+            <div className="right_column" />
           </div>
         </div>
       </div>
