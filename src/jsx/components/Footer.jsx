@@ -46,20 +46,6 @@ function Footer() {
               <div className="iframe_container">
                 <iframe title="The Weekly Tradecast by UNCTAD" height="150" width="100%" style={{ border: 'none', minWidth: 'min(100%, 430px)' }} scrolling="no" data-name="pb-iframe-player" src="" allowFullScreen />
               </div>
-              <ul className="podcasts_container">
-                <li>
-                  <span className="icon" />
-                  <span className="text"><a href="#1">Podcast 1</a></span>
-                </li>
-                <li>
-                  <span className="icon" />
-                  <span className="text"><a href="#1">Podcast 2</a></span>
-                </li>
-                <li>
-                  <span className="icon" />
-                  <span className="text"><a href="#1">Podcast 3</a></span>
-                </li>
-              </ul>
             </div>
           </div>
           <div className="footer_element footer_element_2">
@@ -117,50 +103,9 @@ function Footer() {
                     </li>
                   </ul>
                 </li>
-                <h4>Read the regional press releases</h4>
-                <li>
-                  Africa
-                  <ul>
-                    <li>
-                      <a href="#1" onClick={(event) => track(event.target.href)}>English</a>
-                      {', '}
-                      <a href="#1" onClick={(event) => track(event.target.href)}>Français</a>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  Latin America and the Caribbean
-                  <ul>
-                    <li>
-                      <a href="#1" onClick={(event) => track(event.target.href)}>English</a>
-                      {', '}
-                      <a href="#1" onClick={(event) => track(event.target.href)}>Español</a>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  East and South-East Asia
-                  <ul>
-                    <li>
-                      <a href="#1" onClick={(event) => track(event.target.href)}>English</a>
-                      {', '}
-                      <a href="#1" onClick={(event) => track(event.target.href)}>简体中文</a>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  South and West Asia
-                  <ul>
-                    <li>
-                      <a href="#1" onClick={(event) => track(event.target.href)}>English</a>
-                      {', '}
-                      <a href="/system/files/press-material/PR22017_ar_TDR22_South_West_Asia_final.pdf" onClick={(event) => track(event.target.href)}>العربية</a>
-                    </li>
-                  </ul>
-                </li>
               </ul>
               <h4><a href="#1">Download the report</a></h4>
-              <div><a href="#1"><img src={`${window.location.href.includes('unctad') ? 'https://storage.unctad.org/2022-ldc_report/' : './'}assets/img/2022-ldc_report_cover-min.png`} alt="TDR 2022 Cover" /></a></div>
+              <div><a href="#1"><img src={`${window.location.href.includes('unctad') ? 'https://storage.unctad.org/2022-ldc_report/' : './'}assets/img/2022-ldc_report_cover-min.png`} alt="LDC 2022 Cover" /></a></div>
             </div>
           </div>
         </div>
