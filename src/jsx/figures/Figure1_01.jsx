@@ -15,7 +15,7 @@ function Figure1_10() {
   }));
 
   useEffect(() => {
-    const data_file = `${(window.location.href.includes('unctad.org')) ? 'https://storage.unctad.org/2022-ldc_report/' : './'}assets/data/2022-ldc_report_figure_1_10.csv`;
+    const data_file = `${(window.location.href.includes('unctad.org')) ? 'https://storage.unctad.org/2022-ldc_report/' : './'}assets/data/2022-ldc_report_figure_1_01.csv`;
     try {
       fetch(data_file)
         .then((response) => {
@@ -37,10 +37,11 @@ function Figure1_10() {
         data={dataFigure}
         data_decimals={1}
         export_title_margin={80}
-        idx="1_10"
-        source="UNCTAD secretariat calculations based on the United Nations Global Policy Model."
-        subtitle="Expected output gap in 2023 in G20 countries; percentage"
-        title="Lost economic potential"
+        idx="1_01"
+        note="“Other natural resources” consist mainly of fuels, metals, and other minerals. “Agriculture” refers to agriculture, hunting, forestry, and fishing. Data refer to 2020 for GDP and to 2021 for employment and merchandise exports. GDP data for other natural resources include utilities. LDCs: least developed countries; ODCs: other developing countries."
+        source="UNCTAD Secretariat calculations based on data from the UNCTADStat database and ILOSTAT database [both accessed July 2022]."
+        subtitle="Dependence of economies on natural resources, by country group, 2020–2021"
+        title="TODO INTERESTING TITLE"
         xlabelrotation={-60}
         ymax={10}
         ymin={-16}

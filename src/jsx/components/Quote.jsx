@@ -1,10 +1,13 @@
 import React, { /* useState, */ useEffect, useRef } from 'react';
+import PropTypes from 'prop-types';
 
 // https://www.npmjs.com/package/react-is-visible
 import 'intersection-observer';
 import { useIsVisible } from 'react-is-visible';
 
-function Quote() {
+function Quote({
+  author_name, author_title, first_line, second_line
+}) {
   const quoteRef = useRef();
 
   const isVisible = useIsVisible(quoteRef, { once: true });
@@ -26,14 +29,14 @@ function Quote() {
               <img src={`${window.location.href.includes('unctad') ? 'https://storage.unctad.org/2022-ldc_report/' : './'}assets/img/icons/2022-ldc_report_quote.png`} alt="Quote icon" />
             </div>
             <div className="quote_element quote_text_upper">
-              LDCs disproportionately bear the burden of climate change impacts
+              {first_line}
             </div>
             <div className="quote_element quote_text_lower">
-              The international community must consider their development needs and fully support them to ensure a just, balanced and sustainable low-carbon transition.
+              {second_line}
             </div>
             <div className="quote_element quote_signature">
-              <div className="title">UNCTAD Secretary-General</div>
-              <div className="name">Rebeca Grynspan</div>
+              <div className="title">{author_title}</div>
+              <div className="name">{author_name}</div>
             </div>
           </div>
         )}
@@ -42,5 +45,15 @@ function Quote() {
     </>
   );
 }
+
+Quote.propTypes = {
+  author_name: PropTypes.string.isRequired,
+  author_title: PropTypes.string.isRequired,
+  first_line: PropTypes.string.isRequired,
+  second_line: PropTypes.string.isRequired
+};
+
+Quote.defaultProps = {
+};
 
 export default Quote;

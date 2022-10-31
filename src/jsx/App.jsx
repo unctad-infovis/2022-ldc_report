@@ -14,7 +14,7 @@ import ProgressIndicator from './components/ProgressIndicator.jsx';
 import PhotoHeadline from './components/PhotoHeadline.jsx';
 import Recommendations from './components/Recommendations.jsx';
 import Footer from './components/Footer.jsx';
-// import Figure104 from './figures/Figure1_04.jsx';
+import Figure101 from './figures/Figure1_01.jsx';
 // import Figure109 from './figures/Figure1_09.jsx';
 // import Figure110 from './figures/Figure1_10.jsx';
 // import Figure203 from './figures/Figure2_03.jsx';
@@ -125,13 +125,14 @@ function App() {
           </div>
         </div>
         <div className="right_column">
-          <Quote />
+          <Quote author_name="Rebeca Grynspan" author_title="UNCTAD Secretary-General" first_line="LDCs disproportionately bear the burden of climate change impacts" second_line="The international community must consider their development needs and fully support them to ensure a just, balanced and sustainable low-carbon transition." />
+          <Quote author_name="Sheikh Hasina" author_title="Prime minister of Bangladesh" first_line="Climate finance, technology transfer and burden-sharing mechanisms are overdue" second_line="It's critical to deliver on LDCs' call for meaningful climate actions by developed and emerging economies are delivered" />
         </div>
       </div>
       <div className="section_wrapper">
         <ProgressIndicator appRef={appRef} section1Progress={section1Progress} section2Progress={section2Progress} section3Progress={section3Progress} section4Progress={section4Progress} />
         <div ref={section1} className="section_1_container">
-          <PhotoHeadline img="" max_width={560} text_upper="Commodity trap heightens" text_lower="LDCs’ vulnerability" />
+          <PhotoHeadline img="2022-ldc_report_section1-min.jpg" max_width={560} text_upper="LDCs are highly vulnerable due to " text_lower="commodity dependence" />
           <div className="two_column_layout">
             <div className="left_column">
               <div className="text_container">
@@ -152,19 +153,18 @@ function App() {
                     </p>
                   )}
                 </IsVisible>
-                <p>The vulnerability caused by LDCs’ narrow export bases and high dependence on food imports has been compounded by the impacts of the war in Ukraine on global markets and the COVID-19 pandemic, which pushed an additional 32 million people in LDCs into extreme poverty (living on less than $1.90 a day) in 2020 alone.</p>
                 <p>While boosting LDCs’ export capacity remains critical, UNCTAD urges these countries to use sustainable production methods and invest more in building new productive capacities and expanding their existing ones, especially in low-carbon activities. </p>
                 <p>LDCs should also promote domestic value addition and stronger inter-sectoral production linkages, without which further extraction of resources will continue to degrade the environment but fail to redress the underdevelopment resulting from the commodity-dependence trap.</p>
               </div>
             </div>
             <div className="right_column">
-              TODO: graph about commodity dependency
+              <Figure101 />
               <Recommendations headline="UNCTAD calls on" recommendation_list={['LDCs to promote domestic value addition and stronger inter-sectoral production linkages.', 'LDCs to pursue a “green structural transformation” to reduce poverty and enhance their resilience.', 'LDCs to adopt “green industrial policies” that accelerate the transition from carbon-intensive to low-carbon industries.']} />
             </div>
           </div>
         </div>
         <div ref={section2} className="section_2_container">
-          <PhotoHeadline img="" text_upper="Compliance with trading partners’" text_lower="policies raises new challenges for LDCs" />
+          <PhotoHeadline img="2022-ldc_report_section2-min.jpg" max_width={560} text_upper="Trading partners' policies raise" text_lower="new challenges for LDCs" />
           <div className="two_column_layout">
             <div className="left_column">
               <div className="text_container">
@@ -187,7 +187,7 @@ function App() {
           </div>
         </div>
         <div ref={section3} className="section_3_container">
-          <PhotoHeadline img="" text_upper="LDCs need more international support" text_lower="climate finance, technology transfer and productive capacity-building" />
+          <PhotoHeadline img="2022-ldc_report_section3-min.jpg" max_width={560} text_upper="LDCs need more" text_lower="finance, technologies and capacities" />
           <div className="two_column_layout">
             <div className="left_column">
               <div className="text_container">
@@ -218,7 +218,7 @@ function App() {
           </div>
         </div>
         <div ref={section4} className="section_4_container">
-          <PhotoHeadline img="" text_upper="LDCs" text_lower="Encyplopedia" />
+          <PhotoHeadline img="" text_upper="" text_lower="Facts and figures" />
           <div className="two_column_layout">
             <div className="left_column">
               <div className="text_container">
