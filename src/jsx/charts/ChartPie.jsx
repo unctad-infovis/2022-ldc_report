@@ -12,9 +12,6 @@ import highchartsRegression from 'highcharts-regression';
 import 'intersection-observer';
 import { useIsVisible } from 'react-is-visible';
 
-// Load helpers.
-import roundNr from '../helpers/RoundNr.js';
-
 highchartsAccessibility(Highcharts);
 highchartsRegression(Highcharts);
 highchartsExporting(Highcharts);
@@ -46,7 +43,7 @@ Highcharts.SVGRenderer.prototype.symbols.download = (x, y, w, h) => {
 };
 
 function PieChart({
-  allow_decimals, data, data_decimals, export_title_margin, idx, labels, note, source, subtitle, tick_interval, title, xlabel, ymax, ymin, ystep
+  allow_decimals, data, export_title_margin, idx, labels, note, source, subtitle, tick_interval, title, xlabel, ymax, ymin, ystep
 }) {
   const chartRef = useRef();
   const isVisible = useIsVisible(chartRef, { once: true });
@@ -68,72 +65,7 @@ function PieChart({
       chart: {
         events: {
           render() {
-            setTimeout(() => {
-              // eslint-disable-next-line react/no-this-in-sfc
-              const left = this.plotWidth / 2 + this.plotLeft;
-              // eslint-disable-next-line react/no-this-in-sfc
-              const top = this.plotHeight / 2 + this.plotTop;
-              // eslint-disable-next-line react/no-this-in-sfc
-              if (!this.textLabel) {
-                // eslint-disable-next-line react/no-this-in-sfc
-                this.textLabel = this.renderer
-                  .text('LDC', left, top, true)
-                  .attr({
-                    align: 'center',
-                  })
-                  .css({
-                    color: '#000',
-                    fontSize: '22px',
-                    fontWeight: 700,
-                  })
-                  .add();
-              }
-              // eslint-disable-next-line react/no-this-in-sfc
-              this.textLabel.attr({
-                x: left,
-                y: top - 20
-              });
-              // eslint-disable-next-line react/no-this-in-sfc
-              if (!this.textValue) {
-                // eslint-disable-next-line react/no-this-in-sfc
-                this.textValue = this.renderer
-                  .text('Export', left, top + 30, true)
-                  .attr({
-                    align: 'center'
-                  })
-                  .css({
-                    color: '#000',
-                    fontSize: '22px',
-                    fontWeight: 700,
-                  })
-                  .add();
-              }
-              // eslint-disable-next-line react/no-this-in-sfc
-              this.textValue.attr({
-                x: left,
-                y: top + 8
-              });
-              // eslint-disable-next-line react/no-this-in-sfc
-              if (!this.textMeta) {
-                // eslint-disable-next-line react/no-this-in-sfc
-                this.textMeta = this.renderer
-                  .text('Share', left, top, true)
-                  .attr({
-                    align: 'center',
-                  })
-                  .css({
-                    color: '#000',
-                    fontSize: '22px',
-                    fontWeight: 700,
-                  })
-                  .add();
-              }
-              // eslint-disable-next-line react/no-this-in-sfc
-              this.textMeta.attr({
-                x: left,
-                y: top + 35
-              });
-            }, 3200);
+
           },
           load() {
             // eslint-disable-next-line react/no-this-in-sfc
@@ -240,21 +172,13 @@ function PieChart({
           animation: {
             duration: 3000,
           },
-          innerSize: '50%',
           cursor: 'pointer',
           dataLabels: {
             enabled: labels,
-            formatter() {
-              // eslint-disable-next-line react/no-this-in-sfc
-              return `<div style="text-shadow: 1px 1px 1px ${this.color}">${this.key}<br />${roundNr(this.y, data_decimals)}%</div>`;
-            },
-            position: 'center',
             style: {
               fontFamily: 'Roboto',
               fontSize: '18px',
-              textAnchor: 'middle',
               fontWeight: 400,
-              textAlign: 'center',
               textOutline: '0px solid #000'
             }
           },
@@ -263,6 +187,7 @@ function PieChart({
               return false;
             }
           },
+          size: '80%',
           states: {
             hover: {
               halo: {
@@ -390,7 +315,7 @@ function PieChart({
       }
     });
     chartRef.current.querySelector(`#chartIdx${idx}`).style.opacity = 1;
-  }, [allow_decimals, data, data_decimals, export_title_margin, idx, labels, note, source, subtitle, tick_interval, title, xlabel, ymax, ymin, ystep]);
+  }, [allow_decimals, data, export_title_margin, idx, labels, note, source, subtitle, tick_interval, title, xlabel, ymax, ymin, ystep]);
 
   useEffect(() => {
     if (isVisible === true) {
@@ -413,7 +338,6 @@ function PieChart({
 PieChart.propTypes = {
   allow_decimals: PropTypes.bool,
   data: PropTypes.instanceOf(Array).isRequired,
-  data_decimals: PropTypes.number.isRequired,
   export_title_margin: PropTypes.number,
   idx: PropTypes.string.isRequired,
   labels: PropTypes.bool,

@@ -7,7 +7,7 @@ import scrollIntoView from 'scroll-into-view';
 const analytics = window.gtag || undefined;
 
 function ProgressIndicator({
-  appRef, section1Progress, section2Progress, section3Progress, section4Progress
+  appRef, section1Progress, section2Progress, section3Progress
 }) {
   const track = (name) => {
     if (typeof analytics !== 'undefined') {
@@ -37,7 +37,7 @@ function ProgressIndicator({
   };
   return (
     <>
-      <div className="progress_indicator_container">
+      <div className="progress_indicator_container" style={{ top: `${window.location.href.includes('unctad.org') ? '30px' : '0'}` }}>
         <button type="button" className="section" onClick={() => anchorClick('.section_1_container', 'Section 1')}>
           <div className="progress_bar" style={{ width: `${section1Progress}%` }} />
         </button>
@@ -48,10 +48,6 @@ function ProgressIndicator({
         <div className="section_divider" />
         <button type="button" className="section" onClick={() => anchorClick('.section_3_container', 'Section 3')}>
           <div className="progress_bar" style={{ width: `${section3Progress}%` }} />
-        </button>
-        <div className="section_divider" />
-        <button type="button" className="section" onClick={() => anchorClick('.section_4_container', 'Section 4')}>
-          <div className="progress_bar" style={{ width: `${section4Progress}%` }} />
         </button>
       </div>
       <noscript>Your browser does not support JavaScript!</noscript>
@@ -64,15 +60,13 @@ ProgressIndicator.propTypes = {
   ]).isRequired,
   section1Progress: PropTypes.number,
   section2Progress: PropTypes.number,
-  section3Progress: PropTypes.number,
-  section4Progress: PropTypes.number
+  section3Progress: PropTypes.number
 };
 
 ProgressIndicator.defaultProps = {
   section1Progress: 0,
   section2Progress: 0,
-  section3Progress: 0,
-  section4Progress: 0
+  section3Progress: 0
 };
 
 export default ProgressIndicator;

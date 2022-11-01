@@ -1,0 +1,30 @@
+// https://codepen.io/555/pen/pdwvBP
+.stamp {
+  -webkit-mask-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/8399/grunge.png');
+  -webkit-mask-position: 2rem 3rem;
+  -webkit-mask-size: 944px 604px;
+  // mix-blend-mode: multiply;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+  border: 0.5rem double #D23;
+  color: #D23;
+  display: inline-block;
+  font-family: 'Courier';
+  font-size: 3rem;
+  font-weight: 700;
+  left: calc(50% - 200px);
+  padding: 0.5rem;
+  position: absolute;
+  text-align: center;
+  text-shadow: 2px 2px 2px #fff;
+  text-transform: uppercase;
+  top: 5%;
+  transform: rotate(-5deg);
+  width: 400px;
+  z-index: 2;
+}
+.footer_container {
+  .stamp {
+    top: 50%;
+  }
+}

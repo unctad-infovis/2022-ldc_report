@@ -193,7 +193,7 @@ function LineChart({
         },
         zoomType: 'x'
       },
-      colors: ['#009edb', '#72bf44', '#a066aa', '#f58220'],
+      colors: ['#72bf44', '#009edb', '#72bf44', '#a066aa', '#f58220'],
       credits: {
         enabled: false
       },
@@ -347,7 +347,7 @@ function LineChart({
           const rows = [];
           rows.push(values.map(point => `<div style="color: ${point[2]}"><span class="tooltip_label">${(point[0]) ? `${point[0]}: ` : ''}</span><span class="tooltip_value">${roundNr(point[1], data_decimals)}${suffix}</span></div>`).join(''));
           // eslint-disable-next-line react/no-this-in-sfc
-          return `<div class="tooltip_container"><h3 class="tooltip_header">${xlabel} ${this.x}</h3>${rows} ${this.points[0].point.x}</div>`;
+          return `<div class="tooltip_container"><h3 class="tooltip_header">${xlabel} ${this.x}</h3>${rows}</div>`;
         },
         shadow: false,
         shared: true,
@@ -463,7 +463,7 @@ function LineChart({
         labels: {
           formatter() {
             // eslint-disable-next-line react/no-this-in-sfc
-            return (allow_decimals) ? this.value.toFixed(2) : `${(this.value).toFixed(data_decimals)}${suffix}`;
+            return (allow_decimals) ? this.value.toFixed(2) : `${(this.value)}${suffix}`;
           },
           step: ystep,
           style: {

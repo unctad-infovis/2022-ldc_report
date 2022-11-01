@@ -15,9 +15,40 @@ function Figure7() {
       sliced: false,
       selected: true,
       dataLabels: {
-        distance: -10,
+        distance: -30,
         x: 0,
-        y: 0
+        y: 0,
+        formatter() {
+          // eslint-disable-next-line react/no-this-in-sfc
+          return `${Math.round(this.percentage)}%`;
+        }
+      }
+    })),
+    name: 'Export'
+  }, {
+    data: (data).map(el => ({
+      y: parseFloat(Object.values(el)[1]),
+      name: el.Region,
+      sliced: false,
+      selected: true,
+      dataLabels: {
+        color: 'rgba(0, 0, 0, 0.8)',
+        connectorColor: '#aaa096',
+        fontFamily: 'Roboto',
+        connectorWidth: 2,
+        style: {
+          fontSize: '20px',
+          fontWeight: 400,
+          letterSpacing: '0.02em',
+          textOutline: 0
+        },
+        formatter() {
+          // eslint-disable-next-line react/no-this-in-sfc
+          return this.point.name;
+        },
+        distance: 20,
+        softConnector: true,
+        verticalAlign: 'top'
       }
     })),
     name: 'Export'
@@ -50,7 +81,7 @@ function Figure7() {
         idx="3_04a"
         labels
         source="Source:UNCTAD secretariat calculations based on data from the UNCTADStat database [accessed in May 2022]."
-        subtitle="Main export partners of least developed countries, 2020 (per cent)"
+        subtitle="Main export partners of least developed countries, 2020, percentage"
         tick_interval={2}
         title="Trading partners' new climate policies could hit LDC exports"
         xlabel="Week"

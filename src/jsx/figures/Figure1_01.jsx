@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+import { transpose } from 'csv-transpose';
+
 // Load helpers.
 import CSVtoJSON from '../helpers/CSVtoJSON.js';
 import ChartColumn from '../charts/ChartColumn.jsx';
@@ -24,7 +26,7 @@ function Figure1_10() {
           }
           return response.text();
         })
-        .then(body => setDataFigure(cleanData(CSVtoJSON(body))));
+        .then(body => setDataFigure(cleanData(CSVtoJSON(transpose(body)))));
     } catch (error) {
       console.error(error);
     }
@@ -35,12 +37,13 @@ function Figure1_10() {
       {dataFigure && (
       <ChartColumn
         data={dataFigure}
-        data_decimals={1}
-        export_title_margin={80}
+        data_decimals={0}
+        export_title_margin={10}
         idx="1_01"
-        note="“Other natural resources” consist mainly of fuels, metals, and other minerals. “Agriculture” refers to agriculture, hunting, forestry, and fishing. Data refer to 2020 for GDP and to 2021 for employment and merchandise exports. GDP data for other natural resources include utilities. LDCs: least developed countries; ODCs: other developing countries."
+        note="LDCs: least developed countries; ODCs: other developing countries."
         source="UNCTAD Secretariat calculations based on data from the UNCTADStat database and ILOSTAT database [both accessed July 2022]."
         subtitle="Dependence of economies on natural resources, by country group, 2020–2021"
+        suffix="%"
         title="LDCs overly depend on exporting a few commodities"
         xlabelrotation={0}
         ymax={100}

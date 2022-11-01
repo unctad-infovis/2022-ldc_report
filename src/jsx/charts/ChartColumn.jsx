@@ -70,7 +70,7 @@ function ColumnChart({
             this.renderer.image('https://unctad.org/sites/default/files/2022-06/unctad_logo.svg', 5, 15, 80, 100).add();
           }
         },
-        height: 650,
+        height: 600,
         resetZoomButton: {
           theme: {
             fill: '#fff',
@@ -142,19 +142,21 @@ function ColumnChart({
           animation: {
             duration: 2000,
           },
+          pointWidth: 80,
           cursor: 'pointer',
           groupPadding: 0.05,
           dataLabels: {
             enabled: true,
             formatter() {
               // eslint-disable-next-line react/no-this-in-sfc
-              return `${roundNr(this.y, data_decimals)}${suffix}`;
+              return `${roundNr(this.y, 1)}${suffix}`;
             },
-            color: 'rgba(0, 0, 0, 0.8)',
             style: {
+              color: '#fff',
               fontFamily: 'Roboto',
               fontSize: '13px',
-              fontWeight: 700
+              fontWeight: 400,
+              textOutline: 0
             }
           },
           stacking: 'normal'
@@ -186,7 +188,7 @@ function ColumnChart({
         labels: {
           allowOverlap: true,
           rotation: xlabelrotation,
-          formatter: (el) => ((el.value === 'Euro area') ? `<strong>${el.value}</strong>` : el.value),
+          formatter: (el) => el.value.split(' ').join('<br />'),
           style: {
             color: 'rgba(0, 0, 0, 0.8)',
             fontFamily: 'Roboto',
@@ -282,7 +284,6 @@ function ColumnChart({
         max: ymax,
         min: ymin,
         opposite: false,
-        startOnTick: false,
         plotLines: [{
           color: 'rgba(124, 112, 103, 0.6)',
           value: 0,
@@ -290,7 +291,22 @@ function ColumnChart({
         }],
         showFirstLabel: true,
         showLastLabel: true,
-        tickInterval: 5,
+        stackLabels: {
+          enabled: true,
+          formatter() {
+            // eslint-disable-next-line react/no-this-in-sfc
+            return `${roundNr(this.total, data_decimals)}${suffix}`;
+          },
+          style: {
+            color: '#000',
+            fontSize: '16px',
+            fontWeight: 700,
+            textOutline: 'none'
+          },
+          y: 0
+        },
+        startOnTick: false,
+        tickInterval: 20,
         title: {
           align: 'high',
           enabled: true,

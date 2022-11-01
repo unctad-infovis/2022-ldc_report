@@ -15,6 +15,7 @@ function Footer() {
   return (
     <>
       <div className="footer_container">
+        <span className="stamp">Still under development</span>
         <h2>What do you want to do next?</h2>
         <div className="download_button anchor_downloads"><a href="#1">Download the report</a></div>
         <div className="footer_elements">
