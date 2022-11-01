@@ -74,20 +74,9 @@ module.exports = {
       patterns: [
         { from: 'assets/img/', to: '../public/assets/img/', noErrorOnMissing: true, globOptions: { dot: true, gitignore: true, ignore: ['**/.DS_Store'] }},
         { from: 'assets/vid/', to: '../public/assets/vid/', noErrorOnMissing: true, globOptions: { dot: true, gitignore: true, ignore: ['**/.DS_Store'] }},
-        { from: 'assets/data/Fig_1_4 - data.csv', to: '../public/assets/data/2022-ldc_report_figure_1_04.csv', noErrorOnMissing: true, globOptions: { dot: true, gitignore: true, ignore: ['**/.DS_Store'] }},
-        { from: 'assets/data/Fig_1_8 - data.csv', to: '../public/assets/data/2022-ldc_report_figure_1_08.csv', noErrorOnMissing: true, globOptions: { dot: true, gitignore: true, ignore: ['**/.DS_Store'] }},
-        { from: 'assets/data/Fig_1_9 - data.csv', to: '../public/assets/data/2022-ldc_report_figure_1_09.csv', noErrorOnMissing: true, globOptions: { dot: true, gitignore: true, ignore: ['**/.DS_Store'] }},
-        { from: 'assets/data/Fig_1_10 - data.csv', to: '../public/assets/data/2022-ldc_report_figure_1_10.csv', noErrorOnMissing: true, globOptions: { dot: true, gitignore: true, ignore: ['**/.DS_Store'] }},
-        { from: 'assets/data/Fig_1_25 - data.csv', to: '../public/assets/data/2022-ldc_report_figure_1_25.csv', noErrorOnMissing: true, globOptions: { dot: true, gitignore: true, ignore: ['**/.DS_Store'] }},
-        { from: 'assets/data/Fig_2_3 - data.csv', to: '../public/assets/data/2022-ldc_report_figure_2_03.csv', noErrorOnMissing: true, globOptions: { dot: true, gitignore: true, ignore: ['**/.DS_Store'] }},
-        { from: 'assets/data/Fig_2_5 - data_a.csv', to: '../public/assets/data/2022-ldc_report_figure_2_05a.csv', noErrorOnMissing: true, globOptions: { dot: true, gitignore: true, ignore: ['**/.DS_Store'] }},
-        { from: 'assets/data/Fig_2_5 - data_b.csv', to: '../public/assets/data/2022-ldc_report_figure_2_05b.csv', noErrorOnMissing: true, globOptions: { dot: true, gitignore: true, ignore: ['**/.DS_Store'] }},
-        { from: 'assets/data/Fig_2_6 - data.csv', to: '../public/assets/data/2022-ldc_report_figure_2_06.csv', noErrorOnMissing: true, globOptions: { dot: true, gitignore: true, ignore: ['**/.DS_Store'] }},
-        { from: 'assets/data/Fig_2_9 - data_a.csv', to: '../public/assets/data/2022-ldc_report_figure_2_09a.csv', noErrorOnMissing: true, globOptions: { dot: true, gitignore: true, ignore: ['**/.DS_Store'] }},
-        { from: 'assets/data/Fig_2_9 - data_a_monthly.csv', to: '../public/assets/data/2022-ldc_report_figure_2_09a_monthly.csv', noErrorOnMissing: true, globOptions: { dot: true, gitignore: true, ignore: ['**/.DS_Store'] }},
-        { from: 'assets/data/Fig_2_9 - data_b.csv', to: '../public/assets/data/2022-ldc_report_figure_2_09b.csv', noErrorOnMissing: true, globOptions: { dot: true, gitignore: true, ignore: ['**/.DS_Store'] }},
-        { from: 'assets/data/Fig_2_9 - data_b_monthly.csv', to: '../public/assets/data/2022-ldc_report_figure_2_09b_monthly.csv', noErrorOnMissing: true, globOptions: { dot: true, gitignore: true, ignore: ['**/.DS_Store'] }},
-        { from: 'assets/data/Fig_3_9 - data.csv', to: '../public/assets/data/2022-ldc_report_figure_3_09.csv', noErrorOnMissing: true, globOptions: { dot: true, gitignore: true, ignore: ['**/.DS_Store'] }},
+        { from: 'assets/data/Fig_1_1 - data.csv', to: '../public/assets/data/2022-ldc_report_figure_1_01.csv', noErrorOnMissing: true, globOptions: { dot: true, gitignore: true, ignore: ['**/.DS_Store'] }},
+        { from: 'assets/data/Fig_2_3b - data.csv', to: '../public/assets/data/2022-ldc_report_figure_2_03b.csv', noErrorOnMissing: true, globOptions: { dot: true, gitignore: true, ignore: ['**/.DS_Store'] }},
+        { from: 'assets/data/Fig_3_4a - data.csv', to: '../public/assets/data/2022-ldc_report_figure_3_04a.csv', noErrorOnMissing: true, globOptions: { dot: true, gitignore: true, ignore: ['**/.DS_Store'] }},
         { from: 'src/font/', to: '../public/font/', noErrorOnMissing: true, globOptions: { dot: true, gitignore: true, ignore: ['**/.DS_Store'] }},
         { from: './favicon.png', to: '../public', noErrorOnMissing: true, globOptions: { dot: true, gitignore: true, ignore: ['**/.DS_Store'] }}
       ]

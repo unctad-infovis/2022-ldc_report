@@ -15,13 +15,8 @@ import PhotoHeadline from './components/PhotoHeadline.jsx';
 import Recommendations from './components/Recommendations.jsx';
 import Footer from './components/Footer.jsx';
 import Figure101 from './figures/Figure1_01.jsx';
-// import Figure109 from './figures/Figure1_09.jsx';
-// import Figure110 from './figures/Figure1_10.jsx';
-// import Figure203 from './figures/Figure2_03.jsx';
-// import Figure205a from './figures/Figure2_05a.jsx';
-// import Figure205b from './figures/Figure2_05b.jsx';
-// import Figure209a from './figures/Figure2_09a.jsx';
-// import Figure209b from './figures/Figure2_09b.jsx';
+import Figure203b from './figures/Figure2_03b.jsx';
+import Figure304a from './figures/Figure3_04a.jsx';
 
 const analytics = window.gtag || undefined;
 
@@ -181,7 +176,7 @@ function App() {
               </div>
             </div>
             <div className="right_column">
-              TODO: graph about green transformation
+              <Figure304a />
               <Recommendations headline="UNCTAD calls on" recommendation_list={['The international community to consider the interests of LDCs and avoid policy measures that limit these countries’ policy space, slow their development, and increase the likelihood of pollution havens emerging among them. ', 'LDCs to intensify intra-regional trade and cooperation with neighboring countries and improve the quality and diversity of their products and infrastructure to unlock intra-regional trade.', 'LDC development partners and LDCs to strengthen the synergies between South-South cooperation and North-South cooperation on the low-carbon transition of LDCs.']} />
             </div>
           </div>
@@ -212,7 +207,7 @@ function App() {
               </div>
             </div>
             <div className="right_column">
-              TODO: graph
+              <Figure203b />
               <Recommendations headline="UNCTAD calls on" recommendation_list={['The international community to “reboot” its support for LDCs by fulfilling climate funding commitments and extending special and differential treatment to LDCs by providing targeted, sufficiently flexible and long-term finance. Climate finance to LDCs should ideally be additional to funds from donor countries fulfilling their commitment to provide official development assistance to LDCs corresponding to 0.15% to 0.20% of donors’ gross national income.', 'Advanced economies to enhance technology transfer to LDCs, especially of green technologies.', 'Advanced countries to boost the institutional capacities of LDCs by vastly scaling up technical assistance and capacity-building support to all areas of the low-carbon transition, including climate, development and economic policymaking capabilities.']} />
             </div>
           </div>
