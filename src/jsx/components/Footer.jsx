@@ -15,9 +15,8 @@ function Footer() {
   return (
     <>
       <div className="footer_container">
-        <span className="stamp">Still under development</span>
         <h2>What do you want to do next?</h2>
-        <div className="download_button anchor_downloads"><a href="#1">Download the report</a></div>
+        <div className="download_button anchor_downloads"><a href="https://unctad.org/webflyer/least-developed-countries-report-2022">Download the report</a></div>
         <div className="footer_elements">
           <div className="footer_element footer_element_1">
             <div className="footer_content anchor_video">
@@ -45,7 +44,7 @@ function Footer() {
               <h3>Podcasts</h3>
               <p>Listen to the Weekly Tradecast episodes that explore some of the main issues in the report</p>
               <div className="iframe_container">
-                <iframe title="The Weekly Tradecast by UNCTAD" height="150" width="100%" style={{ border: 'none', minWidth: 'min(100%, 430px)' }} scrolling="no" data-name="pb-iframe-player" src="" allowFullScreen />
+                <iframe title="18. Bearing the brunt: Why least developed countries need more climate help" height="150" width="100%" style={{ border: 'none', minWidth: 'min(100%, 430px)' }} scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=fx45m-1302bc7-pb&from=pb6admin&share=1&download=1&rtl=0&fonts=Verdana&skin=f6f6f6&font-color=000000&logo_link=none&btn-skin=60a0c8" allowFullScreen />
               </div>
             </div>
           </div>
@@ -105,7 +104,7 @@ function Footer() {
                   </ul>
                 </li>
               </ul>
-              <h4><a href="#1">Download the report</a></h4>
+              <h4><a href="https://unctad.org/webflyer/least-developed-countries-report-2022">Download the report</a></h4>
               <div><a href="#1"><img src={`${window.location.href.includes('unctad') ? 'https://storage.unctad.org/2022-ldc_report/' : './'}assets/img/2022-ldc_report_cover-min.png`} alt="LDC 2022 Cover" /></a></div>
             </div>
           </div>

@@ -252,7 +252,7 @@ function App() {
         </div>
         <Footer />
         <div ref={section4} className="section_4_container">
-          <PhotoHeadline img="2022-ldc_report_section4-min.png" text_upper="" text_lower="LDC facts and figures" />
+          <PhotoHeadline img="2022-ldc_report_section4-min.svg" text_upper="" text_lower="LDC facts and figures" />
           <div className="two_column_layout">
             <div className="left_column">
               <div className="text_container">

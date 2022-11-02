@@ -6,13 +6,13 @@ function Header() {
   return (
     <>
       <div className="header_container">
+        <div className="title">
+          <h2>
+            Least Developed Countries Report 2022
+          </h2>
+        </div>
         <div className="header_layout">
           <div className="content_wrapper">
-            <h2>
-              Least Developed Countries
-              <br />
-              Report 2022
-            </h2>
             <h3>46 countries</h3>
             <h4>33 in Africa, 9 in Asia, 3 in the Pacific and 1 in The Caribbean</h4>
             <h3>1.1 billion people</h3>
