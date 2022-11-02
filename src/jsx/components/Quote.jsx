@@ -1,4 +1,4 @@
-import React, { /* useState, */ useEffect, useRef } from 'react';
+import React, { /* useState, */ useEffect, useRef, memo } from 'react';
 import PropTypes from 'prop-types';
 
 // https://www.npmjs.com/package/react-is-visible
@@ -56,4 +56,4 @@ Quote.propTypes = {
 Quote.defaultProps = {
 };
 
-export default Quote;
+export default memo(Quote);

@@ -1,4 +1,4 @@
-import React, { /* useState, useEffect, useRef */ } from 'react';
+import React, { /* useState, useEffect, useRef */ memo } from 'react';
 import PropTypes from 'prop-types';
 
 // https://www.npmjs.com/package/scroll-into-view
@@ -69,4 +69,4 @@ ProgressIndicator.defaultProps = {
   section3Progress: 0
 };
 
-export default ProgressIndicator;
+export default memo(ProgressIndicator);

@@ -1,4 +1,4 @@
-import React, { /* useState, useEffect, useRef */ } from 'react';
+import React, { /* useState, useEffect, useRef */ memo } from 'react';
 import PropTypes from 'prop-types';
 
 function PhotoHeadline({
@@ -30,4 +30,4 @@ PhotoHeadline.defaultProps = {
   max_width: 'auto'
 };
 
-export default PhotoHeadline;
+export default memo(PhotoHeadline);

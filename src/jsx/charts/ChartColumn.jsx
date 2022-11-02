@@ -48,7 +48,7 @@ function ColumnChart({
 }) {
   const chartRef = useRef();
 
-  const chartHeight = 650;
+  const chartHeight = 600;
   const isVisible = useIsVisible(chartRef, { once: true });
   const createChart = useCallback(() => {
     Highcharts.chart(`chartIdx${idx}`, {
@@ -70,7 +70,7 @@ function ColumnChart({
             this.renderer.image('https://unctad.org/sites/default/files/2022-06/unctad_logo.svg', 5, 15, 80, 100).add();
           }
         },
-        height: 600,
+        height: chartHeight,
         resetZoomButton: {
           theme: {
             fill: '#fff',

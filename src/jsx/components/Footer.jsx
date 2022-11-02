@@ -1,4 +1,4 @@
-import React, { /* useState,  useEffect, useRef */ } from 'react';
+import React, { /* useState,  useEffect, useRef */ memo } from 'react';
 
 const analytics = window.gtag || undefined;
 
@@ -116,4 +116,4 @@ function Footer() {
   );
 }
 
-export default Footer;
+export default memo(Footer);

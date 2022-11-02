@@ -10,27 +10,23 @@ function Figure7() {
 
   const cleanData = (data) => ([{
     data: (data).map(el => ({
-      y: parseFloat(Object.values(el)[1]),
-      name: el.Region,
-      sliced: false,
-      selected: true,
       dataLabels: {
         distance: -30,
-        x: 0,
-        y: 0,
         formatter() {
           // eslint-disable-next-line react/no-this-in-sfc
           return `${Math.round(this.percentage)}%`;
-        }
-      }
+        },
+        x: 0,
+        y: 0
+      },
+      name: el.Region,
+      selected: true,
+      sliced: false,
+      y: parseFloat(Object.values(el)[1]),
     })),
     name: 'Export'
   }, {
     data: (data).map(el => ({
-      y: parseFloat(Object.values(el)[1]),
-      name: el.Region,
-      sliced: false,
-      selected: true,
       dataLabels: {
         color: 'rgba(0, 0, 0, 0.8)',
         connectorColor: '#aaa096',
@@ -49,7 +45,11 @@ function Figure7() {
         distance: 20,
         softConnector: true,
         verticalAlign: 'top'
-      }
+      },
+      name: el.Region,
+      selected: true,
+      sliced: false,
+      y: parseFloat(Object.values(el)[1])
     })),
     name: 'Export'
   }]);

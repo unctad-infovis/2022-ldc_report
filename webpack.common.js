@@ -77,6 +77,8 @@ module.exports = {
         { from: 'assets/data/Fig_1_1 - data.csv', to: '../public/assets/data/2022-ldc_report_figure_1_01.csv', noErrorOnMissing: true, globOptions: { dot: true, gitignore: true, ignore: ['**/.DS_Store'] }},
         { from: 'assets/data/Fig_2_3b - data.csv', to: '../public/assets/data/2022-ldc_report_figure_2_03b.csv', noErrorOnMissing: true, globOptions: { dot: true, gitignore: true, ignore: ['**/.DS_Store'] }},
         { from: 'assets/data/Fig_3_4a - data.csv', to: '../public/assets/data/2022-ldc_report_figure_3_04a.csv', noErrorOnMissing: true, globOptions: { dot: true, gitignore: true, ignore: ['**/.DS_Store'] }},
+        { from: 'assets/data/countries-110m.topojson', to: '../public/assets/data/countries-110m.topojson', noErrorOnMissing: true, globOptions: { dot: true, gitignore: true, ignore: ['**/.DS_Store'] }},
+        { from: 'assets/data/WorldMap_Territories_54030.geojson', to: '../public/assets/data/WorldMap_Territories_54030.geojson', noErrorOnMissing: true, globOptions: { dot: true, gitignore: true, ignore: ['**/.DS_Store'] }},
         { from: 'src/font/', to: '../public/font/', noErrorOnMissing: true, globOptions: { dot: true, gitignore: true, ignore: ['**/.DS_Store'] }},
         { from: './favicon.png', to: '../public', noErrorOnMissing: true, globOptions: { dot: true, gitignore: true, ignore: ['**/.DS_Store'] }}
       ]

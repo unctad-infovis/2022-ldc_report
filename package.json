@@ -44,10 +44,12 @@
   },
   "dependencies": {
     "csv-transpose": "^1.2.0",
+    "d3": "^7.6.1",
     "highcharts": "^10.2.1",
     "highcharts-regression": "^2.2.0",
     "intersection-observer": "^0.12.2",
     "react-is-visible": "^1.2.0",
-    "scroll-into-view": "^1.16.2"
+    "scroll-into-view": "^1.16.2",
+    "topojson-client": "^3.1.0"
   }
 }

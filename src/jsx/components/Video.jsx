@@ -1,4 +1,4 @@
-import React, { /* useState, */ useEffect, useRef } from 'react';
+import React, { /* useState, */ useEffect, useRef, memo} from 'react';
 
 function Video() {
   const videoRef = useRef();
@@ -32,4 +32,4 @@ function Video() {
   );
 }
 
-export default Video;
+export default memo(Video);

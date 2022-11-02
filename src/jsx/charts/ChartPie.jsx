@@ -75,33 +75,11 @@ function PieChart({
         height: chartHeight,
         marginRight: 20,
         type: 'pie',
-        resetZoomButton: {
-          theme: {
-            fill: '#fff',
-            r: 0,
-            states: {
-              hover: {
-                fill: '#0077b8',
-                stroke: 'transparent',
-                style: {
-                  color: '#fff'
-                }
-              }
-            },
-            stroke: '#7c7067',
-            style: {
-              fontFamily: 'Roboto',
-              fontSize: '13px',
-              fontWeight: 400
-            }
-          }
-        },
         style: {
           color: 'rgba(0, 0, 0, 0.8)',
           fontFamily: 'Roboto',
           fontWeight: 400
-        },
-        zoomType: 'x'
+        }
       },
       colors: ['#009edb', '#72bf44', '#a066aa', '#f58220', '#ffcb05'],
       credits: {
@@ -116,20 +94,6 @@ function PieChart({
             symbolFill: '#000'
           }
         }
-      },
-      legend: {
-        align: 'right',
-        enabled: (data.length > 1),
-        itemStyle: {
-          color: '#000',
-          cursor: 'default',
-          fontFamily: 'Roboto',
-          fontSize: '14px',
-          fontWeight: 400
-        },
-        layout: 'horizontal',
-        margin: 0,
-        verticalAlign: 'top'
       },
       subtitle: {
         align: 'left',
@@ -172,7 +136,7 @@ function PieChart({
           animation: {
             duration: 3000,
           },
-          cursor: 'pointer',
+          cursor: 'default',
           dataLabels: {
             enabled: labels,
             style: {
@@ -187,6 +151,7 @@ function PieChart({
               return false;
             }
           },
+          innerSize: '50%',
           size: '80%',
           states: {
             hover: {

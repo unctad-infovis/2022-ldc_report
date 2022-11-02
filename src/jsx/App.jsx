@@ -37,7 +37,9 @@ function App() {
   const [section1Progress, setSection1Progress] = useState(0);
   const [section2Progress, setSection2Progress] = useState(0);
   const [section3Progress, setSection3Progress] = useState(0);
-  const [offset, setOffset] = useState(0);
+
+  const [offset, setOffset] = useState(false);
+
   useEffect(() => {
     const onScroll = () => setOffset(window.pageYOffset);
     window.removeEventListener('scroll', onScroll);
@@ -114,9 +116,7 @@ function App() {
       <div className="two_column_layout">
         <div className="left_column">
           <div className="text_container">
-            <p className="ingress">
-              There are currently 46 economies designated by the UN as the least developed countries (LDCs), entitling them to preferential market access, aid, technological capabilities-building and special technical assistance, among other concessions and international support measures.
-            </p>
+            <p className="ingress">There are currently 46 economies designated by the UN as the least developed countries (LDCs), entitling them to preferential market access, aid, technological capabilities-building and special technical assistance, among other concessions and international support measures.</p>
             <button className="ldc_button" type="button" onClick={() => anchorClick('.section_4_container', 'LDC facts')}>» Learn more about LDCs</button>
             <IsVisible once>
               {(isVisible) => (
@@ -153,14 +153,7 @@ function App() {
           <div className="two_column_layout">
             <div className="left_column">
               <div className="text_container">
-                <IsVisible once>
-                  {(isVisible) => (
-                    <p>
-                      LDC economies largely depend on exports of commodities such as minerals, metals and fuels, which produce high CO2 emissions and are often inputs to carbon-intensive global value chains including metal products, cement, fertilizers or electricity.
-                      <span className={`highlight ${(isVisible) ? 'visible' : ''}`} />
-                    </p>
-                  )}
-                </IsVisible>
+                <p>LDC economies largely depend on exports of commodities such as minerals, metals and fuels, which produce high CO2 emissions and are often inputs to carbon-intensive global value chains including metal products, cement, fertilizers or electricity.</p>
                 <IsVisible once>
                   {(isVisible) => (
                     <p>
@@ -218,9 +211,7 @@ function App() {
           <div className="two_column_layout">
             <div className="left_column">
               <div className="text_container">
-                <p>
-                  LDCs make up 22% of countries with the most recurring appeals for funds in reaction to extreme weather crises.
-                </p>
+                <p>LDCs make up 22% of countries with the most recurring appeals for funds in reaction to extreme weather crises.</p>
                 <IsVisible once>
                   {(isVisible) => (
                     <p>
@@ -243,7 +234,6 @@ function App() {
                     </p>
                   )}
                 </IsVisible>
-
                 <IsVisible once>
                   {(isVisible) => (
                     <p>
@@ -282,7 +272,6 @@ function App() {
                   <li>Caribbean (1): Haiti.</li>
                   <li>Pacific (3): Kiribati, Solomon Islands and Tuvalu.</li>
                 </ul>
-
               </div>
             </div>
             <div className="right_column">
