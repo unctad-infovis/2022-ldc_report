@@ -26,7 +26,7 @@ function Header() {
             <h3>UNCTAD calls for action</h3>
           </div>
           <div className="map_wrapper">
-            <Map />
+            <Map appID="#app-root-2022-ldc_report" />
           </div>
         </div>
         <svg className="arrows">

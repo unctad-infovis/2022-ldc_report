@@ -89,38 +89,10 @@
         }
       }
       .map_wrapper {
-        background-color: rgba(0, 158, 219, 0.3);
-        border-radius: 50%;
         position: absolute;
         right: 10px;
         top: calc(50% - 250px);
         z-index: 1;
-        @media all and (max-width: 600px) {
-          display: none;
-        }
-        @media all and (max-width: 1000px) {
-          opacity: 0.4;
-        }
-        .map_container {
-          margin: auto auto;
-          svg {
-            display: block;
-            margin: auto auto;
-            g {
-              path {
-                position: relative;
-                stroke-width: 0.5px;
-                z-index: -1;
-              }
-              .map_text {
-                fill: transparent;
-                font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-                font-size: 12px;
-                text-anchor: middle;
-              }
-            }
-          }
-        }
       }
     }
     @import 'arrows.less';
@@ -498,74 +470,7 @@
         }
       }
     }
-    
-    .chart_container {
-      max-width: 600px;
-      @media all and (max-width: 991px) {
-        margin: auto auto 20px auto;
-      }
-      @media all and (min-width: 992px) {
-        margin: auto auto 20px auto;
-      }
-      hr {
-        border-color: #eeeeee;
-        border-style: solid;
-        border-width: 1px 0 0 0;
-        margin: 0.5em 0;
-      }
-      .chart {
-        font-family: Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
-        margin-left: -10px;
-        margin-top: -10px;
-        min-height: 440px;
-        opacity: 0;
-        transition-duration: 500ms;
-        transition-property: opacity;
-        width: 100%;
-        .unctad_logo {
-          float: right;
-          height: 60px;
-          width: 60px;
-        }
-        .tooltip_container {
-          .tooltip_header {
-            color: #000;
-            font-size: 20px;
-            line-height: 22px;
-            margin: 0 0 5px 0;
-          }
-          .tooltip_label {
-            font-size: 18px;
-            font-weight: 400;
-            line-height: 20px;
-          }
-          .tooltip_value {
-            font-size: 18px;
-            font-weight: 700;
-            line-height: 20px;
-          }
-        }
-      }
-      .highcharts-button-hover {
-        rect {
-          fill: #fff;
-        }
-        .highcharts-button-symbol {
-          stroke: @ungrey;
-        }
-      }
-      .highcharts-button-symbol {
-        stroke: #000;
-      }
-      .highcharts-contextmenu {
-        li {
-          font-size: 12px !important;
-          &:hover {
-            background-color: @unblue !important; 
-          }
-        }
-      }
-    }
+    @import 'chart_styles.less'; 
   }
   .recommendations_container {
     background-color: @unblue;

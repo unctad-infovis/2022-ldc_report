@@ -43,7 +43,7 @@ Highcharts.SVGRenderer.prototype.symbols.download = (x, y, w, h) => {
 };
 
 function PieChart({
-  allow_decimals, data, export_title_margin, idx, labels, note, source, subtitle, tick_interval, title, xlabel, ymax, ymin, ystep
+  allow_decimals, data, export_title_margin, idx, labels, note, source, standalone, subtitle, tick_interval, title, xlabel, ymax, ymin, ystep
 }) {
   const chartRef = useRef();
   const isVisible = useIsVisible(chartRef, { once: true });
@@ -125,13 +125,6 @@ function PieChart({
         enabled: false
       },
       plotOptions: {
-        series: {
-          states: {
-            hover: {
-              enabled: false
-            }
-          }
-        },
         pie: {
           animation: {
             duration: 3000,
@@ -158,6 +151,13 @@ function PieChart({
               halo: {
                 size: 0
               },
+              enabled: false
+            }
+          }
+        },
+        series: {
+          states: {
+            hover: {
               enabled: false
             }
           }
@@ -291,7 +291,7 @@ function PieChart({
   }, [createChart, isVisible]);
 
   return (
-    <div className="chart_container" style={{ minHeight: chartHeight }}>
+    <div className="chart_container" style={(standalone) ? { minHeight: chartHeight, maxWidth: '600px' } : { minHeight: chartHeight }}>
       <div ref={chartRef}>
         {(isVisible) && (<div className="chart" id={`chartIdx${idx}`} />)}
       </div>
@@ -308,6 +308,7 @@ PieChart.propTypes = {
   labels: PropTypes.bool,
   note: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
   source: PropTypes.string.isRequired,
+  standalone: PropTypes.bool,
   subtitle: PropTypes.string,
   tick_interval: PropTypes.number,
   title: PropTypes.string.isRequired,
@@ -322,6 +323,7 @@ PieChart.defaultProps = {
   export_title_margin: 0,
   labels: true,
   note: false,
+  standalone: false,
   subtitle: false,
   tick_interval: 1,
   xlabel: '',

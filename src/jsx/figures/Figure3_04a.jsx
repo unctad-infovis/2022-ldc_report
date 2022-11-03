@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
+import '../../styles/chart_styles.less';
 
 // Load helpers.
 import CSVtoJSON from '../helpers/CSVtoJSON.js';
 import ChartPie from '../charts/ChartPie.jsx';
 
-function Figure7() {
+function Figure3_04a({ standalone }) {
   // Data states.
   const [dataFigure, setDataFigure] = useState(false);
 
@@ -77,10 +79,11 @@ function Figure7() {
         allow_decimals={false}
         data={dataFigure}
         data_decimals={0}
-        export_title_margin={30}
-        idx="3_04a"
+        export_title_margin={0}
+        idx={(standalone) ? '3_04a_standalone' : '3_04a'}
         labels
-        source="UNCTAD Secretariat calculations based on data from the UNCTADStat database [accessed in May 2022]."
+        source="UNCTAD secretariat calculations based on data from the UNCTADStat database [accessed in May 2022]."
+        standalone={standalone}
         subtitle="Main export partners of least developed countries, 2020, percentage"
         tick_interval={2}
         title="Trading partners' new climate policies could hit LDC exports"
@@ -92,4 +95,11 @@ function Figure7() {
   );
 }
 
-export default Figure7;
+Figure3_04a.propTypes = {
+  standalone: PropTypes.bool
+};
+Figure3_04a.defaultProps = {
+  standalone: true
+};
+
+export default Figure3_04a;

@@ -44,7 +44,7 @@ Highcharts.SVGRenderer.prototype.symbols.download = (x, y, w, h) => {
 };
 
 function ColumnChart({
-  data, data_decimals, export_title_margin, idx, note, source, subtitle, suffix, title, xlabel, xlabelrotation, ymax, ymin
+  data, data_decimals, export_title_margin, idx, note, source, standalone, subtitle, suffix, title, xlabel, xlabelrotation, ymax, ymin
 }) {
   const chartRef = useRef();
 
@@ -242,22 +242,7 @@ function ColumnChart({
         text: title
       },
       tooltip: {
-        backgroundColor: '#fff',
-        borderColor: '#ccc',
-        borderRadius: 0,
-        borderWidth: 1,
-        crosshairs: true,
-        formatter() {
-          // eslint-disable-next-line react/no-this-in-sfc
-          const values = this.points.map(point => [point.series.name, point.y, point.color]);
-          const rows = [];
-          rows.push(values.map(point => `<div style="color: ${point[2]}"><span class="tooltip_label">${(point[0]) ? `${point[0]}: ` : ''}</span><span class="tooltip_value">${roundNr(point[1], data_decimals)}${suffix}</span></div>`).join(''));
-          // eslint-disable-next-line react/no-this-in-sfc
-          return `<div class="tooltip_container"><h3 class="tooltip_header">${xlabel} ${this.x}</h3>${rows}</div>`;
-        },
-        shadow: false,
-        shared: true,
-        useHTML: true
+        enabled: false
       },
       yAxis: {
         accessibility: {
@@ -338,7 +323,7 @@ function ColumnChart({
   }, [createChart, isVisible]);
 
   return (
-    <div className="chart_container" style={{ minHeight: chartHeight }}>
+    <div className="chart_container" style={(standalone) ? { minHeight: chartHeight, maxWidth: '700px' } : { minHeight: chartHeight }}>
       <div ref={chartRef}>
         {(isVisible) && (<div className="chart" id={`chartIdx${idx}`} />)}
       </div>
@@ -354,6 +339,7 @@ ColumnChart.propTypes = {
   idx: PropTypes.string.isRequired,
   note: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
   source: PropTypes.string.isRequired,
+  standalone: PropTypes.bool,
   subtitle: PropTypes.string,
   suffix: PropTypes.string,
   title: PropTypes.string.isRequired,
@@ -366,6 +352,7 @@ ColumnChart.propTypes = {
 ColumnChart.defaultProps = {
   export_title_margin: 0,
   note: false,
+  standalone: false,
   subtitle: false,
   suffix: '',
   xlabel: '',

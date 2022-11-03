@@ -50,7 +50,7 @@ Highcharts.SVGRenderer.prototype.symbols.download = (x, y, w, h) => {
 };
 
 function LineChart({
-  allow_decimals, annotations, data, data_decimals, export_title_margin, idx, labels, line_width, note, show_first_label, show_only_first_and_last_labels, source, subtitle, suffix, tick_interval, tick_interval_y, title, xlabel, x_labels_month_year, ymax, ymin, ystep
+  allow_decimals, annotations, data, data_decimals, export_title_margin, idx, labels, line_width, note, show_first_label, show_only_first_and_last_labels, source, standalone, subtitle, suffix, tick_interval, tick_interval_y, title, xlabel, x_labels_month_year, ymax, ymin, ystep
 }) {
   const chartRef = useRef();
   const isVisible = useIsVisible(chartRef, { once: true });
@@ -517,7 +517,7 @@ function LineChart({
   }, [createChart, isVisible]);
 
   return (
-    <div className="chart_container" style={{ minHeight: chartHeight }}>
+    <div className="chart_container" style={(standalone) ? { minHeight: chartHeight, maxWidth: '700px' } : { minHeight: chartHeight }}>
       <div ref={chartRef}>
         {(isVisible) && (<div className="chart" id={`chartIdx${idx}`} />)}
       </div>
@@ -539,6 +539,7 @@ LineChart.propTypes = {
   show_first_label: PropTypes.bool,
   show_only_first_and_last_labels: PropTypes.bool,
   source: PropTypes.string.isRequired,
+  standalone: PropTypes.bool,
   subtitle: PropTypes.string,
   suffix: PropTypes.string,
   tick_interval: PropTypes.number,
@@ -560,6 +561,7 @@ LineChart.defaultProps = {
   note: false,
   show_first_label: true,
   show_only_first_and_last_labels: false,
+  standalone: false,
   subtitle: false,
   suffix: '',
   tick_interval: 1,

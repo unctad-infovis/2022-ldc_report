@@ -177,7 +177,7 @@ function App() {
               </div>
             </div>
             <div className="right_column">
-              <Figure101 />
+              <Figure101 standalone={false} />
             </div>
           </div>
           <Recommendations headline="UNCTAD calls on" recommendation_list={['LDCs to add more value to their exports and strengthen links between their production sectors.', 'LDCs to pursue a green structural transformation – transition towards low-carbon economic activities to enhance their resilience.', 'LDCs to adopt green industrial policies to accelerate the switch towards low-carbon technologies and products.']} />
@@ -211,7 +211,7 @@ function App() {
               </div>
             </div>
             <div className="right_column">
-              <Figure304a />
+              <Figure304a standalone={false} />
             </div>
           </div>
           <Recommendations headline="UNCTAD calls on" recommendation_list={['Trading partners to avoid policies that limit LDCs’ policy space and increase the likelihood of pollution havens emerging among them.', 'LDCs to intensify intra-regional trade and cooperation with neighbouring countries and improve the quality and diversity of their products and infrastructure.', 'Development partners to strengthen international cooperation on the low-carbon transition of LDCs.']} />
@@ -255,7 +255,7 @@ function App() {
               </div>
             </div>
             <div className="right_column">
-              <Figure203b />
+              <Figure203b standalone={false} />
             </div>
           </div>
           <Recommendations headline="UNCTAD calls on" recommendation_list={['Developed countries to provide targeted, flexible and long-term finance and fullfil their official development assistance commitments to LDCs.', 'Developed economies to enhance technology transfer to LDCs, especially green technologies.', 'Developed countries to scale up technical assistance and capacity-building to support LDCs in all areas of the low-carbon transition.']} />
