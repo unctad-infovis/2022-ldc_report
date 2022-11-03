@@ -197,7 +197,17 @@ function App() {
                   )}
                 </IsVisible>
                 <p>Any trade partners’ policies targeting the carbon emissions generated in the production of exported goods could hit LDC exports, even indirectly if LDCs were to be exempted from such policies.</p>
-                <p>The policies could have serious consequences if they were to provide an incentive to displacing polluting industries out of developed countries and into LDCs as a way for the former countries to meet their climate commitments.</p>
+                <IsVisible once>
+                  {(isVisible) => (
+                    <p>
+                      The policies could have serious consequences if they
+                      {' '}
+                      <span className={`highlight ${(isVisible) ? 'visible' : ''}`}>were to provide an incentive to displacing polluting industries out of developed countries and into LDCs</span>
+                      {' '}
+                      as a way for the former countries to meet their climate commitments.
+                    </p>
+                  )}
+                </IsVisible>
               </div>
             </div>
             <div className="right_column">
@@ -237,8 +247,8 @@ function App() {
                 <IsVisible once>
                   {(isVisible) => (
                     <p>
-                      Climate adaptation has received far less international support than mitigation, not only in terms of financing, but also in terms of technology development and transfer, capacity development and technical assistance.
-                      <span className={`highlight ${(isVisible) ? 'visible' : ''}`} />
+                      <span className={`highlight ${(isVisible) ? 'visible' : ''}`}>Climate adaptation has received far less international support than mitigation</span>
+                      , not only in terms of financing, but also in terms of technology development and transfer, capacity development and technical assistance.
                     </p>
                   )}
                 </IsVisible>

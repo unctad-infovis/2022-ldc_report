@@ -18,17 +18,19 @@
   @content_max_width: 1200px;
   .header_container {
     align-items: flex-start;
+    box-sizing: border-box;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     margin: auto auto;
+    max-width: @content_max_width;
     min-height: 100vh;
     padding: 0 20px;
-    flex-direction: column;
-    box-sizing: border-box;
-    max-width: 1200px;
     position: relative;
     width: 100%;
-    z-index: 2;
+    @media all and (max-width: 500px) {
+      padding: 0 10px;
+    }
     .title {
       width: 100%;
       h2 {
@@ -45,19 +47,27 @@
           font-size: 43px;
           line-height: 46px;
         }
+        @media all and (max-width: 500px) {
+          text-align: left;
+        }
       }
     }
     .header_layout {
       align-items: center;
-      background-color: #fff;
+      background-color: #f1f1f1;
       box-shadow: 0 6px 20px rgb(114 191 68 / 1);
       box-sizing: border-box;
       display: flex;
-      max-width: 1200px;
+      max-width: @content_max_width;
       min-height: 520px;
       padding: 40px;
       position: relative;
       width: 100%;
+      @media all and (max-width: 500px) {
+        padding: 0;
+        box-shadow: 0 0 0 transparent;
+        background-color: #fff;
+      }
       .content_wrapper {
         position: relative;
         z-index: 2;
@@ -89,6 +99,9 @@
         @media all and (max-width: 600px) {
           display: none;
         }
+        @media all and (max-width: 1000px) {
+          opacity: 0.4;
+        }
         .map_container {
           margin: auto auto;
           svg {
@@ -96,12 +109,11 @@
             margin: auto auto;
             g {
               path {
-                z-index: -1;
                 position: relative;
                 stroke-width: 0.5px;
+                z-index: -1;
               }
               .map_text {
-                fill: rgba(153, 153, 153, 0.5);
                 fill: transparent;
                 font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
                 font-size: 12px;
@@ -369,6 +381,7 @@
       @media all and (max-width: 991px) {
         margin: auto auto 20px auto;
         max-width: 600px;
+        width: 100%;
       }
       @media all and (min-width: 992px) {
         margin: 40px 0 20px 0;

@@ -52,7 +52,7 @@ function Map() {
     g.current = svg.current.append('g');
     interval.current = setInterval(() => {
       setCurrentLocation((cur) => cur + 1);
-    }, 6000);
+    }, 7000);
   }, [interval]);
 
   const getAreaFill = useCallback((d) => ((coordinates[currentLocation].countries.includes(d.properties.code)) ? 'rgba(114, 191, 68, 1)' : '#eee'), [coordinates, currentLocation]);

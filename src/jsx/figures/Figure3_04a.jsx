@@ -80,7 +80,7 @@ function Figure7() {
         export_title_margin={30}
         idx="3_04a"
         labels
-        source="Source:UNCTAD secretariat calculations based on data from the UNCTADStat database [accessed in May 2022]."
+        source="UNCTAD Secretariat calculations based on data from the UNCTADStat database [accessed in May 2022]."
         subtitle="Main export partners of least developed countries, 2020, percentage"
         tick_interval={2}
         title="Trading partners' new climate policies could hit LDC exports"
