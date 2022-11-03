@@ -10,7 +10,8 @@ import scrollIntoView from 'scroll-into-view';
 import '../styles/styles.less';
 
 // import Video from './Video.jsx';
-import Header from './components/Header.jsx';
+import Video from './components/Video.jsx';
+// import Header from './components/Header.jsx';
 import PageNavigation from './components/PageNavigation.jsx';
 import Quote from './components/Quote.jsx';
 import ProgressIndicator from './components/ProgressIndicator.jsx';
@@ -111,7 +112,8 @@ function App() {
 
   return (
     <div className="app" ref={appRef}>
-      <Header anchorClick={anchorClick} />
+      <Video anchorClick={anchorClick} />
+      {/* <Header anchorClick={anchorClick} /> */}
       <PageNavigation appRef={appRef} />
       <div className="two_column_layout">
         <div className="left_column">
@@ -128,6 +130,7 @@ function App() {
                 </p>
               )}
             </IsVisible>
+            <p className="ingress">The world’s 46 LDCs, home to about 1.1 billion people, have contributed minimally to CO2 emissions. In 2019 they accounted for less than 4% of total world greenhouse gas emissions. Yet over the last 50 years, 69% of worldwide deaths caused by climate-related disasters occurred in LDCs.</p>
             <IsVisible once>
               {(isVisible) => (
                 <p className="ingress">
@@ -267,7 +270,7 @@ function App() {
         </div>
         <Footer />
         <div ref={section4} className="section_4_container">
-          <PhotoHeadline img="" text_upper="" text_lower="LDC facts and figures" />
+          <PhotoHeadline img="2022-ldc_report_section4-min.svg" text_upper="" text_lower="LDC facts and figures" />
           <div className="two_column_layout">
             <div className="left_column">
               <div className="text_container">

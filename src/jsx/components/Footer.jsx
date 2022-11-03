@@ -19,24 +19,24 @@ function Footer() {
         <div className="download_button anchor_downloads"><a href="https://unctad.org/webflyer/least-developed-countries-report-2022">Download the report</a></div>
         <div className="footer_elements">
           <div className="footer_element footer_element_1">
-            <div className="footer_content anchor_video" style={{ display: 'none' }}>
+            <div className="footer_content anchor_video">
               <h3>Watch the video</h3>
               <div className="iframe_container youtube_iframe">
-                <iframe src="" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+                <iframe src="https://www.youtube.com/embed/d302G7PwTl4" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
               </div>
               <ul>
                 <li>
-                  <a href="#1" target="_blank" rel="noreferrer">Français</a>
+                  <a href="https://youtu.be/G8ersQtJIRI" target="_blank" rel="noreferrer">Français</a>
                   {', '}
-                  <a href="#1" target="_blank" rel="noreferrer">Español</a>
+                  <a href="https://youtu.be/r9VF61nA9gQ" target="_blank" rel="noreferrer">Español</a>
                   {', '}
-                  <a href="#1" target="_blank" rel="noreferrer">العربية</a>
+                  <a href="https://youtu.be/7Ls_-C4ZzwU" target="_blank" rel="noreferrer">العربية</a>
                   {', '}
-                  <a href="#1" target="_blank" rel="noreferrer">简体中文</a>
+                  <a href="https://youtu.be/4ci7M66WaYQ" target="_blank" rel="noreferrer">简体中文</a>
                   {', '}
-                  <a href="#1" target="_blank" rel="noreferrer">Русский</a>
+                  <a href="https://youtu.be/IaKjvYQ4ZoI" target="_blank" rel="noreferrer">Русский</a>
                   {', '}
-                  <a href="#1" target="_blank" rel="noreferrer">Português</a>
+                  <a href="https://youtu.be/KjR9cjBwBcs" target="_blank" rel="noreferrer">Português</a>
                 </li>
               </ul>
             </div>
@@ -62,24 +62,24 @@ function Footer() {
                   </ul>
                 </li>
               </ul>
-              <ul style={{ display: 'none' }}>
+              <ul>
                 <li>
                   <h4>Download the report video</h4>
                   <ul>
                     <li>
-                      <a href="#1" target="_blank" rel="noreferrer">English</a>
+                      <a href="https://vimeo.com/766235566" target="_blank" rel="noreferrer">English</a>
                       {', '}
-                      <a href="#1" target="_blank" rel="noreferrer">Français</a>
+                      <a href="https://vimeo.com/766664451" target="_blank" rel="noreferrer">Français</a>
                       {', '}
-                      <a href="#1" target="_blank" rel="noreferrer">Español</a>
+                      <a href="https://vimeo.com/766664605" target="_blank" rel="noreferrer">Español</a>
                       {', '}
-                      <a href="#1" target="_blank" rel="noreferrer">العربية</a>
+                      <a href="https://vimeo.com/766664254" target="_blank" rel="noreferrer">العربية</a>
                       {', '}
-                      <a href="#1" target="_blank" rel="noreferrer">简体中文</a>
+                      <a href="https://vimeo.com/766664302" target="_blank" rel="noreferrer">简体中文</a>
                       {', '}
-                      <a href="#1" target="_blank" rel="noreferrer">Русский</a>
+                      <a href="https://vimeo.com/766665486" target="_blank" rel="noreferrer">Русский</a>
                       {', '}
-                      <a href="#1" target="_blank" rel="noreferrer">Português</a>
+                      <a href="https://vimeo.com/766664533" target="_blank" rel="noreferrer">Português</a>
                     </li>
                   </ul>
                 </li>

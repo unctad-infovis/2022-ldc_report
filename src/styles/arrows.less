@@ -1,15 +1,18 @@
 .arrows {
   cursor: pointer;
   height: 80px;
+  position: absolute;
+  bottom: 20px;
+  left: calc(50% - 30px);
   margin: 60px auto;
   text-align: center;
   width: 60px;
-  z-index: 2;
+  z-index: 5;
   path {
     animation: arrow 2s infinite;
     fill: transparent;
     stroke-width: 3px;  
-    stroke: @unblue;
+    stroke: #fff;
     &.a1 {
       animation-delay: -1s;
     }
