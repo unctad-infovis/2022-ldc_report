@@ -323,7 +323,7 @@ function ColumnChart({
   }, [createChart, isVisible]);
 
   return (
-    <div className="chart_container" style={(standalone) ? { minHeight: chartHeight, maxWidth: '700px' } : { minHeight: chartHeight }}>
+    <div className="chart_container" style={(standalone) ? { minHeight: chartHeight, maxWidth: '700px', marginTop: '20px' } : { minHeight: chartHeight }}>
       <div ref={chartRef}>
         {(isVisible) && (<div className="chart" id={`chartIdx${idx}`} />)}
       </div>
