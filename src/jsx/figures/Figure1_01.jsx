@@ -42,10 +42,9 @@ function Figure1_01({ standalone }) {
         data_decimals={0}
         export_title_margin={10}
         idx={(standalone) ? '1_01_standalone' : '1_01'}
-        note="LDCs: least developed countries; ODCs: other developing countries."
-        source="UNCTAD secretariat calculations based on data from the UNCTADStat database and ILOSTAT database [both accessed July 2022]."
+        source="UNCTAD secretariat calculations based on data from the UNCTADStat database [accessed July 2022]."
         standalone={standalone}
-        subtitle="Dependence of economies on natural resources, by country group, 2020–2021"
+        subtitle="Dependence of economies on natural resource exports, by country group, 2020–2021"
         suffix="%"
         title="LDCs overly depend on exporting a few commodities"
         xlabelrotation={0}

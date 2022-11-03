@@ -1,8 +1,9 @@
 import React, { /* useState, useEffect, useRef */memo } from 'react';
+import PropTypes from 'prop-types';
 
 import Map from './Map.jsx';
 
-function Header() {
+function Header({ anchorClick }) {
   return (
     <>
       <div className="header_container">
@@ -29,7 +30,7 @@ function Header() {
             <Map appID="#app-root-2022-ldc_report" />
           </div>
         </div>
-        <svg className="arrows">
+        <svg className="arrows" onClick={() => anchorClick('.two_column_layout', 'Arrows')}>
           <path className="a1" d="M0 0 L30 32 L60 0" />
           <path className="a2" d="M0 20 L30 52 L60 20" />
           <path className="a3" d="M0 40 L30 72 L60 40" />
@@ -39,5 +40,14 @@ function Header() {
     </>
   );
 }
+
+Header.propTypes = {
+  anchorClick: PropTypes.instanceOf(Function).isRequired
+
+};
+
+Header.defaultProps = {
+
+};
 
 export default memo(Header);

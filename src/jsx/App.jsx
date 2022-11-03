@@ -111,7 +111,7 @@ function App() {
 
   return (
     <div className="app" ref={appRef}>
-      <Header />
+      <Header anchorClick={anchorClick} />
       <PageNavigation appRef={appRef} />
       <div className="two_column_layout">
         <div className="left_column">
@@ -123,7 +123,7 @@ function App() {
                 <p className="ingress">
                   UNCTAD’s Least Developed Countries Report published on 3 November 2022 says
                   {' '}
-                  <span className={`highlight ${(isVisible) ? 'visible' : ''}`}>LDCs are the indicator against which history will judge how effectively the world makes a just low-carbon transition</span>
+                  <span className={`highlight ${(isVisible) ? 'visible' : ''}`}>LDCs are the example against which history will judge how effectively the world makes a just low-carbon transition</span>
                   , while considering development needs and countries’ different obligations and capacities to fight climate change.
                 </p>
               )}
@@ -143,17 +143,22 @@ function App() {
         </div>
         <div className="right_column">
           <Quote author_name="Rebeca Grynspan" author_title="UNCTAD Secretary-General" first_line="LDCs DISPROPORTIONATELY BEAR THE BURDEN OF CLIMATE CHANGE IMPACTS" second_line="The international community must consider their development needs and fully support them to ensure a just, balanced and sustainable low-carbon transition." />
-          {/* <Quote author_name="Sheikh Hasina" author_title="Prime minister of Bangladesh" first_line="Climate finance, technology transfer and burden-sharing mechanisms are overdue" second_line="It's critical to deliver on LDCs' call for meaningful climate actions by developed and emerging economies are delivered" /> */}
+          <Quote author_name="Sheikh Hasina" author_title="Prime minister of Bangladesh" first_line="CLIMATE FINANCE, TECHNOLOGY TRANSFER AND BURDEN-SHARING MECHANISMS ARE OVERDUE" second_line="It's critical to deliver on LDCs' call for meaningful climate actions by developed and emerging economies are delivered" />
         </div>
       </div>
       <div className="section_wrapper">
         <ProgressIndicator appRef={appRef} section1Progress={section1Progress} section2Progress={section2Progress} section3Progress={section3Progress} />
         <div ref={section1} className="section_1_container">
-          <PhotoHeadline img="2022-ldc_report_section1-min.jpg" max_width={560} text_upper="LDCs are highly vulnerable due to " text_lower="commodity dependence" />
+          <PhotoHeadline img="2022-ldc_report_section1-min.jpg" max_width={560} text_upper="LDCs are highly vulnerable due to" text_lower="commodity dependence" />
           <div className="two_column_layout">
             <div className="left_column">
               <div className="text_container">
-                <p>LDC economies largely depend on exports of commodities such as minerals, metals and fuels, which produce high CO2 emissions and are often inputs to carbon-intensive global value chains including metal products, cement, fertilizers or electricity.</p>
+                <p>
+                  LDC economies largely depend on exports of commodities such as minerals, metals and fuels, which produce high CO
+                  <sub>2</sub>
+                  {' '}
+                  emissions and are often inputs to carbon-intensive global value chains including metal products, cement, fertilizers or electricity.
+                </p>
                 <IsVisible once>
                   {(isVisible) => (
                     <p>
@@ -217,7 +222,7 @@ function App() {
           <Recommendations headline="UNCTAD calls on" recommendation_list={['Trading partners to avoid policies that limit LDCs’ policy space and increase the likelihood of pollution havens emerging among them.', 'LDCs to intensify intra-regional trade and cooperation with neighbouring countries and improve the quality and diversity of their products and infrastructure.', 'Development partners to strengthen international cooperation on the low-carbon transition of LDCs.']} />
         </div>
         <div ref={section3} className="section_3_container">
-          <PhotoHeadline img="2022-ldc_report_section3-min.jpg" max_width={560} text_upper="LDCs need more" text_lower="finance, technologies and capacities" />
+          <PhotoHeadline img="2022-ldc_report_section3-min.jpg" max_width={570} text_upper="LDCs need more" text_lower="finance, technologies and productive capacities" />
           <div className="two_column_layout">
             <div className="left_column">
               <div className="text_container">
@@ -262,7 +267,7 @@ function App() {
         </div>
         <Footer />
         <div ref={section4} className="section_4_container">
-          <PhotoHeadline img="2022-ldc_report_section4-min.svg" text_upper="" text_lower="LDC facts and figures" />
+          <PhotoHeadline img="" text_upper="" text_lower="LDC facts and figures" />
           <div className="two_column_layout">
             <div className="left_column">
               <div className="text_container">

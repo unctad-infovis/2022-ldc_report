@@ -41,7 +41,7 @@ function Footer() {
               </ul>
             </div>
             <div className="footer_content anchor_podcasts">
-              <h3>Podcasts</h3>
+              <h3>Podcast</h3>
               <p>Listen to the Weekly Tradecast episodes that explore some of the main issues in the report</p>
               <div className="iframe_container">
                 <iframe title="18. Bearing the brunt: Why least developed countries need more climate help" height="150" width="100%" style={{ border: 'none', minWidth: 'min(100%, 430px)' }} scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=fx45m-1302bc7-pb&from=pb6admin&share=1&download=1&rtl=0&fonts=Verdana&skin=f6f6f6&font-color=000000&logo_link=none&btn-skin=60a0c8" allowFullScreen />

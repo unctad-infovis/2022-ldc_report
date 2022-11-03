@@ -12,8 +12,7 @@ function Figure2_03b({ standalone }) {
   const cleanData = (data) => (data.map(el => ({
     data: Object.values(el).map(val => parseFloat(val)).filter(val => !Number.isNaN(val)),
     labels: Object.keys(el).filter(val => val !== 'Share of world total'),
-    name: 'Share of world total',
-    selected: true
+    name: 'Share of world total'
   })));
 
   useEffect(() => {
@@ -47,10 +46,10 @@ function Figure2_03b({ standalone }) {
         show_only_first_and_last_labels
         source="UNCTAD secretariat calculations based on data from the Emergency Events Database [accessed April 2022]."
         standalone={standalone}
-        subtitle="Share of people affected in the least developed countries, 2000–2020"
+        subtitle="Share of people in LDCs out of total affected people in the world, 2000–2020"
         tick_interval={3}
         tick_interval_y={10}
-        title="Climate disasters increasingly affect more people in LDC"
+        title="Climate disasters increasingly affect more people in LDCs"
         xlabel="Year"
       />
       )}

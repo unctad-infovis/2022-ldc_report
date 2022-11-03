@@ -203,6 +203,7 @@
       background-color: transparent;
       background-blend-mode: normal;
       .photo_headline_content {
+        padding: 0;
         .photo_headlines {
           background-color: transparent;
         }
@@ -266,7 +267,7 @@
           &.highlight {
             color: @ungreen;
             font-weight: 700;
-            max-width: 600px;
+            max-width: 650px;
           }
         }
       }
@@ -289,21 +290,21 @@
     .text_container {
       margin-bottom: 40px;
       .ldc_button {
-        font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
         background-color: #fff;
+        border: 0;
         cursor: pointer;
+        cursor: pointer;
+        font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 18px;
+        font-weight: bold;
         margin-bottom: 20px;
         padding: 0;
-        font-weight: bold;
-        font-size: 18px;
-        border: 0;
-        text-decoration: underline;
-        cursor: pointer;
         position: relative;
+        text-decoration: none;
         &:hover {
           background-color: #fff;
           box-sizing: border-box;
-          color: @ungreen;
+          text-decoration: underline;
         }
       }
       ol,
@@ -362,15 +363,16 @@
         box-sizing: border-box;
         font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
         letter-spacing: 0.02em;
-        margin: auto auto 80px auto;
+        margin: auto auto 40px auto;
         max-width: 600px;
         overflow: hidden;
-        padding: 60px 0 0 70px;
+        padding: 0px 0 0 70px;
         position: relative;
         text-transform: uppercase;
         width: 100%;
         .quote_element {
           &.quote_mark {
+            display: none;
             position: absolute;
             transform: translate(-75px, -250px);
             img {
