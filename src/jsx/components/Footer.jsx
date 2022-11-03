@@ -19,7 +19,7 @@ function Footer() {
         <div className="download_button anchor_downloads"><a href="https://unctad.org/webflyer/least-developed-countries-report-2022">Download the report</a></div>
         <div className="footer_elements">
           <div className="footer_element footer_element_1">
-            <div className="footer_content anchor_video">
+            <div className="footer_content anchor_video" style={{ display: 'none' }}>
               <h3>Watch the video</h3>
               <div className="iframe_container youtube_iframe">
                 <iframe src="" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
@@ -51,7 +51,7 @@ function Footer() {
           <div className="footer_element footer_element_2">
             <div className="footer_content anchor_press">
               <h3>Press material</h3>
-              <ul>
+              <ul style={{ display: 'none' }}>
                 <li>
                   <h4>Press conference</h4>
                   <div className="iframe_container youtube_iframe">
@@ -62,7 +62,7 @@ function Footer() {
                   </ul>
                 </li>
               </ul>
-              <ul>
+              <ul style={{ display: 'none' }}>
                 <li>
                   <h4>Download the report video</h4>
                   <ul>
@@ -87,19 +87,19 @@ function Footer() {
                   <h4>Read the global press release</h4>
                   <ul>
                     <li>
-                      <a href="#1" onClick={(event) => track(event.target.href)}>English</a>
+                      <a href="https://unctad.org/press-material/unctad-sets-out-actions-support-least-developed-countries-global-low-carbon" onClick={(event) => track(event.target.href)}>English</a>
                       {', '}
-                      <a href="#1" onClick={(event) => track(event.target.href)}>Français</a>
+                      <a href="https://unctad.org/fr/press-material/la-cnuced-definit-des-actions-pour-soutenir-les-pays-les-moins-avances-dans-la" onClick={(event) => track(event.target.href)}>Français</a>
                       {', '}
-                      <a href="#1" onClick={(event) => track(event.target.href)}>Español</a>
+                      <a href="https://unctad.org/es/press-material/la-unctad-establece-acciones-para-apoyar-los-paises-menos-adelantados-en-la" onClick={(event) => track(event.target.href)}>Español</a>
                       {', '}
-                      <a href="#1" onClick={(event) => track(event.target.href)}>العربية</a>
+                      <a href="https://unctad.org/system/files/press-material/pr2022-022_ar.pdf" onClick={(event) => track(event.target.href)}>العربية</a>
                       {', '}
-                      <a href="#1" onClick={(event) => track(event.target.href)}>简体中文</a>
+                      <a href="https://unctad.org/system/files/press-material/pr2022-022_ch.pdf" onClick={(event) => track(event.target.href)}>简体中文</a>
                       {', '}
-                      <a href="#1" onClick={(event) => track(event.target.href)}>Русский</a>
+                      <a href="https://unctad.org/system/files/press-material/pr2022-022_ru.pdf" onClick={(event) => track(event.target.href)}>Русский</a>
                       {', '}
-                      <a href="#1" onClick={(event) => track(event.target.href)}>Português</a>
+                      <a href="https://unctad.org/system/files/press-material/pr2022-022_pt.pdf" onClick={(event) => track(event.target.href)}>Português</a>
                     </li>
                   </ul>
                 </li>

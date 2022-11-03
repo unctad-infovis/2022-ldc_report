@@ -143,7 +143,7 @@ function App() {
         </div>
         <div className="right_column">
           <Quote author_name="Rebeca Grynspan" author_title="UNCTAD Secretary-General" first_line="LDCs DISPROPORTIONATELY BEAR THE BURDEN OF CLIMATE CHANGE IMPACTS" second_line="The international community must consider their development needs and fully support them to ensure a just, balanced and sustainable low-carbon transition." />
-          <Quote author_name="Sheikh Hasina" author_title="Prime minister of Bangladesh" first_line="CLIMATE FINANCE, TECHNOLOGY TRANSFER AND BURDEN-SHARING MECHANISMS ARE OVERDUE" second_line="It's critical to deliver on LDCs' call for meaningful climate actions by developed and emerging economies are delivered" />
+          <Quote author_name="Sheikh Hasina" author_title="Prime minister of Bangladesh" first_line="CLIMATE FINANCE, TECHNOLOGY TRANSFER AND BURDEN-SHARING MECHANISMS ARE OVERDUE" second_line="It's critical to deliver on LDCs' call for meaningful climate actions by developed and emerging economies." />
         </div>
       </div>
       <div className="section_wrapper">
