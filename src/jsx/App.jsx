@@ -273,7 +273,7 @@ function App() {
         <Footer />
         <div ref={section4} className="section_4_container">
           <PhotoHeadline img="2022-ldc_report_ldc_map.png" text_upper="" text_lower="LDC facts and figures" />
-          <div className="two_column_layout">
+          <div className="two_column_layout" style={{ marginTop: 0 }}>
             <div className="left_column">
               <div className="text_container">
                 <h3>Where are LDCs located?</h3>
