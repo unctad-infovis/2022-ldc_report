@@ -111,7 +111,7 @@ function PieChart({
       title: {
         align: 'left',
         margin: export_title_margin,
-        widthAdjust: -144,
+        widthAdjust: -160,
         style: {
           color: '#000',
           fontSize: '30px',
