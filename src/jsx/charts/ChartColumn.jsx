@@ -128,7 +128,7 @@ function ColumnChart({
         enabled: (data.length > 1),
         itemStyle: {
           color: '#000',
-          cursor: 'default',
+          cursor: 'pointer',
           fontFamily: 'Roboto',
           fontSize: '16px',
           fontWeight: 400
@@ -142,14 +142,14 @@ function ColumnChart({
           animation: {
             duration: 2000,
           },
-          pointWidth: 80,
-          cursor: 'pointer',
+          cursor: 'default',
+          enableMouseTracking: false,
           groupPadding: 0.05,
           dataLabels: {
             enabled: true,
             formatter() {
               // eslint-disable-next-line react/no-this-in-sfc
-              return `${roundNr(this.y, 1)}${suffix}`;
+              return `${roundNr(this.y, 1)}`;
             },
             style: {
               color: '#fff',
@@ -159,6 +159,16 @@ function ColumnChart({
               textOutline: 0
             }
           },
+          events: {
+            legendItemClick(e) {
+              e.preventDefault();
+            },
+            mouseOver() {
+              return false;
+            }
+
+          },
+          pointWidth: 80,
           stacking: 'normal'
         }
       },

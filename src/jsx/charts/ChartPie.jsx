@@ -129,6 +129,7 @@ function PieChart({
           animation: {
             duration: 3000,
           },
+          borderWidth: 3,
           cursor: 'default',
           dataLabels: {
             enabled: labels,
@@ -144,8 +145,8 @@ function PieChart({
               return false;
             }
           },
-          innerSize: '50%',
-          size: '80%',
+          innerSize: '0%',
+          size: '70%',
           states: {
             hover: {
               halo: {

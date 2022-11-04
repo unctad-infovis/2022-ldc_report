@@ -34,6 +34,7 @@
           line-height: 100px;
           font-weight: 700;
           margin: 0 20px 10px 20px;
+          text-shadow: 1px 1px 1px @ungreen;
           @media all and (max-width: 900px) {
             font-size: 70px;  
             line-height: 70px;  
@@ -313,13 +314,14 @@
       background-size: contain;
       margin-top: 10px;
       .photo_headline_content {
+        padding: 30% 0 20px 0;
         .photo_headlines {
           background-color: transparent;
           margin: 0;
           padding: 0 15px;
           h2 {
             position: relative;
-            top: 40px;
+            top: 30px;
           }
         }
       }
@@ -345,6 +347,7 @@
       max-width: @content_max_width;
       @media all and (max-width: 991px) {
         padding: 40% 0 20px 0;
+        max-width: 600px;
       }
       @media all and (min-width: 992px) {
         padding: 25% 0 20px 0;
@@ -356,7 +359,6 @@
         @media all and (max-width: 991px) {
           border-radius: 5px;
           max-width: 600px;
-          margin: auto auto;
         }
         @media all and (min-width: 992px) {
           max-width: 800px;
@@ -372,7 +374,7 @@
           @media all and (max-width: 991px) {
             font-size: 40px;
             line-height: 40px;
-            margin: auto auto;
+            margin: auto 0;
           }
           @media all and (min-width: 992px) {
             font-size: 60px;
@@ -427,17 +429,19 @@
         line-height: 24px;
       }
       p {
+        color: #333;
         font-size: 18px;
         line-height: 24px;
         margin: 0 0 20px 0;
         a {
-          color: #454545;
+          color: #333;
           text-decoration: none;
           &:hover {
             text-decoration: underline;
           }
         }
         &.ingress {
+          color: #333;
           font-size: 20px;
           font-weight: 700;
           line-height: 26px;
@@ -484,7 +488,7 @@
         box-sizing: border-box;
         font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
         letter-spacing: 0.02em;
-        margin: auto auto 20px auto;
+        margin: auto auto 40px auto;
         max-width: 600px;
         overflow: hidden;
         padding: 60px 0 0 70px;

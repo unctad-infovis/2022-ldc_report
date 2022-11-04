@@ -293,6 +293,7 @@ function App() {
                   <li>Pacific (3): Kiribati, Solomon Islands and Tuvalu.</li>
                 </ul>
                 <p>
+                  <br />
                   »
                   {' '}
                   <a href="https://storage.unctad.org/2022-ldc_report/assets/img/2022-ldc_report_ldc_map.svg" target="_blank" onClick={(event) => track(event.target.href)} rel="noreferrer">Download LDC map (.svg)</a>
