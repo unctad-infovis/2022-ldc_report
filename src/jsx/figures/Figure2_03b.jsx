@@ -34,7 +34,7 @@ function Figure2_03b({ standalone }) {
   }, []);
 
   return (
-    <div style={{ marginTop: (document.querySelector('#app-root-2022-ldc_report_figure_2_03b')?.getAttribute('margin-top')) ? document.querySelector('#app-root-2022-ldc_report_figure_2_03b').getAttribute('margin-top') : '40px' }}>
+    <div style={{ marginTop: (document.querySelector('#app-root-2022-ldc_report_figure_2_03b')?.getAttribute('margin-top')) ? document.querySelector('#app-root-2022-ldc_report_figure_2_03b').getAttribute('margin-top') : (standalone) ? '40px' : 0 }}>
       {dataFigure && (
       <ChartLine
         allow_decimals={false}
