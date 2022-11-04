@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700.css');
 @import url('https://fonts.googleapis.com/css?family=Roboto:300.css');
 
-@import 'stamp.less';
 @import 'colors.less';
-@import 'site_overrides.less';
 
 #app-root-2022-ldc_report .app {
   @import 'arrows.less';
@@ -36,6 +34,10 @@
           line-height: 100px;
           font-weight: 700;
           margin: 0 20px 10px 20px;
+          @media all and (max-width: 900px) {
+            font-size: 70px;  
+            line-height: 70px;  
+          }
           @media all and (max-width: 700px) {
             font-size: 80px;  
             line-height: 80px;  
@@ -52,7 +54,11 @@
           line-height: 75px;
           font-weight: 400;
           text-align: center;
-          margin: 0 20px 10px 20px;
+          margin: 0 20px 0px 20px;
+          @media all and (max-width: 900px) {
+            font-size: 60px;  
+            line-height: 60px;  
+          }
           @media all and (max-width: 700px) {
             font-size: 50px;
             line-height: 50px;
@@ -80,12 +86,16 @@
         position: absolute;
         text-align: center;
         text-transform: uppercase;
-        top: 50px;
+        top: 20px;
         vertical-align: middle;
         width: 100%;
         z-index: 3;
         @media all and (max-width: 1000px) {
           top: 20px;
+        }
+        @media all and (max-width: 900px) {
+          font-size: 36px;  
+          line-height: 36px;  
         }
         @media all and (max-width: 700px) {
           top: 20px;
@@ -296,15 +306,21 @@
   }
   .section_4_container {
     .photo_headline_container {
-      margin-top: 40px;
       background-attachment: scroll;
-      background-size: auto 100%;
-      background-color: transparent;
       background-blend-mode: normal;
+      background-color: transparent;
+      background-position: calc(50% - 20px) center;
+      background-size: contain;
+      margin-top: 10px;
       .photo_headline_content {
-        // padding: 0;
         .photo_headlines {
           background-color: transparent;
+          margin: 0;
+          padding: 0 15px;
+          h2 {
+            position: relative;
+            top: 40px;
+          }
         }
       }
     }
@@ -392,7 +408,6 @@
         background-color: #fff;
         border: 0;
         cursor: pointer;
-        cursor: pointer;
         font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-size: 18px;
         font-weight: bold;
@@ -415,6 +430,13 @@
         font-size: 18px;
         line-height: 24px;
         margin: 0 0 20px 0;
+        a {
+          color: #454545;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
         &.ingress {
           font-size: 20px;
           font-weight: 700;

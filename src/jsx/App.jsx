@@ -119,7 +119,9 @@ function App() {
         <div className="left_column">
           <div className="text_container">
             <p className="ingress">There are currently 46 economies designated by the UN as the least developed countries (LDCs), entitling them to preferential market access, aid, technological capabilities-building and special technical assistance, among other concessions and international support measures.</p>
-            <button className="ldc_button" type="button" onClick={() => anchorClick('.section_4_container', 'LDC facts')}>» Learn more about LDCs</button>
+            »
+            {' '}
+            <button className="ldc_button" type="button" onClick={() => anchorClick('.section_4_container', 'LDC facts')}>Learn more about LDCs</button>
             <IsVisible once>
               {(isVisible) => (
                 <p className="ingress">
@@ -270,7 +272,7 @@ function App() {
         </div>
         <Footer />
         <div ref={section4} className="section_4_container">
-          <PhotoHeadline img="2022-ldc_report_section4-min.svg" text_upper="" text_lower="LDC facts and figures" />
+          <PhotoHeadline img="2022-ldc_report_ldc_map.png" text_upper="" text_lower="LDC facts and figures" />
           <div className="two_column_layout">
             <div className="left_column">
               <div className="text_container">
@@ -290,6 +292,15 @@ function App() {
                   <li>Caribbean (1): Haiti.</li>
                   <li>Pacific (3): Kiribati, Solomon Islands and Tuvalu.</li>
                 </ul>
+                <p>
+                  »
+                  {' '}
+                  <a href="https://storage.unctad.org/2022-ldc_report/assets/img/2022-ldc_report_ldc_map.svg" target="_blank" onClick={(event) => track(event.target.href)} rel="noreferrer">Download LDC map (.svg)</a>
+                  <br />
+                  »
+                  {' '}
+                  <a href="https://storage.unctad.org/2022-ldc_report/assets/img/2022-ldc_report_ldc_map.png" target="_blank" onClick={(event) => track(event.target.href)} rel="noreferrer">Download LDC map (.png)</a>
+                </p>
               </div>
             </div>
             <div className="right_column">
