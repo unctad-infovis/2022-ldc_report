@@ -13,7 +13,7 @@ function Figure2_03b({ standalone }) {
   const cleanData = (data) => (data.map(el => ({
     data: Object.values(el).map(val => parseFloat(val)).filter(val => !Number.isNaN(val)),
     labels: Object.keys(el).filter(val => val !== 'Share of world total'),
-    color: (document.querySelector('#app-root-2022-ldc_report_figure_2_03b').getAttribute('line-color')) ? document.querySelector('#app-root-2022-ldc_report_figure_2_03b').getAttribute('line-color') : undefined,
+    color: (document.querySelector('#app-root-2022-ldc_report_figure_2_03b')?.getAttribute('line-color')) ? document.querySelector('#app-root-2022-ldc_report_figure_2_03b').getAttribute('line-color') : undefined,
     name: 'Share of world total'
   })));
 
@@ -34,7 +34,7 @@ function Figure2_03b({ standalone }) {
   }, []);
 
   return (
-    <div>
+    <div style={{ marginTop: (document.querySelector('#app-root-2022-ldc_report_figure_2_03b')?.getAttribute('margin-top')) ? document.querySelector('#app-root-2022-ldc_report_figure_2_03b').getAttribute('margin-top') : '40px' }}>
       {dataFigure && (
       <ChartLine
         allow_decimals={false}

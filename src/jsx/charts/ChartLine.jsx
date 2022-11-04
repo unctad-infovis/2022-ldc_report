@@ -55,7 +55,7 @@ function LineChart({
   const chartRef = useRef();
   const isVisible = useIsVisible(chartRef, { once: true });
 
-  const chartHeight = 600;
+  const chartHeight = 650;
   const createChart = useCallback(() => {
     Highcharts.chart(`chartIdx${idx}`, {
       annotations: [{
@@ -517,7 +517,7 @@ function LineChart({
   }, [createChart, isVisible]);
 
   return (
-    <div className="chart_container" style={(standalone) ? { minHeight: chartHeight, maxWidth: '700px', marginTop: '40px' } : { minHeight: chartHeight }}>
+    <div className="chart_container" style={(standalone) ? { minHeight: chartHeight, maxWidth: '700px' } : { minHeight: chartHeight }}>
       <div ref={chartRef}>
         {(isVisible) && (<div className="chart" id={`chartIdx${idx}`} />)}
       </div>
