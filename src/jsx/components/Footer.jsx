@@ -51,14 +51,14 @@ function Footer() {
           <div className="footer_element footer_element_2">
             <div className="footer_content anchor_press">
               <h3>Press material</h3>
-              <ul style={{ display: 'none' }}>
+              <ul>
                 <li>
                   <h4>Press conference</h4>
                   <div className="iframe_container youtube_iframe">
-                    <iframe src="" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+                    <iframe src="https://www.youtube.com/embed/NVR8KhMy8P4" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
                   </div>
                   <ul>
-                    <li><a href="#1" target="_blank" rel="noreferrer">Download the press conference</a></li>
+                    <li><a href="https://vimeo.com/767263767" target="_blank" rel="noreferrer">Download the press conference</a></li>
                   </ul>
                 </li>
               </ul>
