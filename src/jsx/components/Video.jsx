@@ -6,10 +6,10 @@ function Video({ anchorClick }) {
   const mp4Ref = useRef();
   const webmRef = useRef();
   useEffect(() => {
-    videoRef.current.src = (window.location.href.includes('unctad') ? 'https://storage.unctad.org/2022-ldc_report/' : './') + ((videoRef.current.offsetWidth < 768) ? 'assets/vid/2022-ldc_report_video.mp4' : 'assets/vid/2022-ldc_report_video.mp4');
-    mp4Ref.current.src = (window.location.href.includes('unctad') ? 'https://storage.unctad.org/2022-ldc_report/' : './') + ((videoRef.current.offsetWidth < 768) ? 'assets/vid/2022-ldc_report_video.mp4' : 'assets/vid/2022-ldc_report_video.mp4');
-    webmRef.current.src = (window.location.href.includes('unctad') ? 'https://storage.unctad.org/2022-ldc_report/' : './') + ((videoRef.current.offsetWidth < 768) ? 'assets/vid/2022-ldc_report_video.webm' : 'assets/vid/2022-ldc_report_video.webm');
-    videoRef.current.poster = (window.location.href.includes('unctad') ? 'https://storage.unctad.org/2022-ldc_report/' : './') + ((videoRef.current.offsetWidth < 768) ? 'assets/img/2022-ldc_report_video_poster.png' : 'assets/img/2022-ldc_report_video_poster.png');
+    videoRef.current.src = (window.location.href.includes('unctad.org') ? 'https://storage.unctad.org/2022-ldc_report/' : './') + ((videoRef.current.offsetWidth < 768) ? 'assets/vid/2022-ldc_report_video.mp4' : 'assets/vid/2022-ldc_report_video.mp4');
+    mp4Ref.current.src = (window.location.href.includes('unctad.org') ? 'https://storage.unctad.org/2022-ldc_report/' : './') + ((videoRef.current.offsetWidth < 768) ? 'assets/vid/2022-ldc_report_video.mp4' : 'assets/vid/2022-ldc_report_video.mp4');
+    webmRef.current.src = (window.location.href.includes('unctad.org') ? 'https://storage.unctad.org/2022-ldc_report/' : './') + ((videoRef.current.offsetWidth < 768) ? 'assets/vid/2022-ldc_report_video.webm' : 'assets/vid/2022-ldc_report_video.webm');
+    videoRef.current.poster = (window.location.href.includes('unctad.org') ? 'https://storage.unctad.org/2022-ldc_report/' : './') + ((videoRef.current.offsetWidth < 768) ? 'assets/img/2022-ldc_report_video_poster.png' : 'assets/img/2022-ldc_report_video_poster.png');
     if (!videoRef.current.playing) {
       videoRef.current.play();
     }
