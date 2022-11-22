@@ -110,7 +110,6 @@ function Footer() {
           </div>
         </div>
       </div>
-      <noscript>Your browser does not support JavaScript!</noscript>
     </>
   );
 }

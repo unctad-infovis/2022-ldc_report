@@ -44,7 +44,6 @@ function PageNavigation({ appRef }) {
           <div className="button_container"><a href="https://unctad.org/publications-search?f[0]=product%3A392" onClick={() => track('Previous reports')}>Previous reports</a></div>
         </div>
       </div>
-      <noscript>Your browser does not support JavaScript!</noscript>
     </>
   );
 }

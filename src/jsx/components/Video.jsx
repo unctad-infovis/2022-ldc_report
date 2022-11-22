@@ -50,7 +50,6 @@ function Video({ anchorClick }) {
           <path className="a3" d="M0 40 L30 72 L60 40" />
         </svg>
       </div>
-      <noscript>Your browser does not support JavaScript!</noscript>
     </>
   );
 }

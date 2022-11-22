@@ -14,7 +14,6 @@ function PhotoHeadline({
           </div>
         </div>
       </div>
-      <noscript>Your browser does not support JavaScript!</noscript>
     </>
   );
 }

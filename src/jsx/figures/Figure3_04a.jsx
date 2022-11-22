@@ -90,7 +90,6 @@ function Figure3_04a({ standalone }) {
         xlabel="Week"
       />
       )}
-      <noscript>Your browser does not support JavaScript!</noscript>
     </div>
   );
 }

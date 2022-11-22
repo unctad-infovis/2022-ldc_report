@@ -52,7 +52,6 @@ function Figure1_01({ standalone }) {
         ymin={0}
       />
       )}
-      <noscript>Your browser does not support JavaScript!</noscript>
     </div>
   );
 }

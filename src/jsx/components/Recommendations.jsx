@@ -23,7 +23,6 @@ function Recommendations({ headline, recommendation_list }) {
           </div>
         )}
       </IsVisible>
-      <noscript>Your browser does not support JavaScript!</noscript>
     </>
   );
 }
