@@ -6,6 +6,11 @@
 
 * [Least Developed Countries Report](https://unctad.org/ldc2022)
 * [UNCTAD/Twitter](https://twitter.com/UNCTAD/status/1588577252744515584)
+* [UNCTAD/Twitter](https://twitter.com/UNCTAD/status/1588937007082143745)
+* [UNCTAD/Instagram](https://www.instagram.com/p/Ckgx2UFNJ2F/)
+* [UNCTAD/Instagram](https://www.instagram.com/p/CkljRHHNeHm/)
+* [UNCTAD/Instagram](https://www.instagram.com/p/Cki_rP0Mnyv/)
+* [UNCTAD/Instagram](https://www.instagram.com/p/Cl1I7uDIXAp/)
 
 ## Rights of usage
 
