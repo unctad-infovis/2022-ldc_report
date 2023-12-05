@@ -36,7 +36,7 @@ function ProgressIndicator({
     }, 50);
   };
   return (
-    <div className="progress_indicator_container" style={{ top: `${window.location.href.includes('unctad.org') ? '30px' : '0'}` }}>
+    <div className="progress_indicator_container" style={{ top: `${window.location.href.includes('unctad.org') ? '0' : '0'}` }}>
       <button type="button" className="section" onClick={() => anchorClick('.section_1_container', 'Section 1')}>
         {
           // eslint-disable-jsx-a11y/control-has-associated-label
