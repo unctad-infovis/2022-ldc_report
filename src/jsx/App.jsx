@@ -1,4 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, {
+  useState, useEffect, useRef, useCallback
+} from 'react';
 
 // https://www.npmjs.com/package/react-is-visible
 import 'intersection-observer';
@@ -21,8 +23,6 @@ import Footer from './components/Footer.jsx';
 import Figure101 from './figures/Figure1_01.jsx';
 import Figure203b from './figures/Figure2_03b.jsx';
 import Figure304a from './figures/Figure3_04a.jsx';
-
-const analytics = window.gtag || undefined;
 
 function App() {
   const appRef = useRef();
@@ -55,45 +55,41 @@ function App() {
     setSection3Progress((offset > section3.current.offsetTop - windowHeight) ? (Math.min(((offset - (section3.current.offsetTop - windowHeight)) / section3.current.offsetHeight) * 100, 100)) : 0);
   }, [offset]);
 
+  const analytics = window.gtag || undefined;
+  const track = useCallback((label_event = false, value_event = false) => {
+    if (typeof analytics !== 'undefined' && label_event !== false && value_event !== false) {
+      analytics('event', 'project_interaction', {
+        label: label_event,
+        project_name: '2022-edar_report',
+        transport_type: 'beacon',
+        value: value_event
+      });
+    }
+  }, [analytics]);
+
   useEffect(() => {
     if (section1Progress === 100 && section1Seen === false) {
       setSection1Seen(true);
-      if (typeof analytics !== 'undefined') {
-        analytics('event', 'Scroll', { event_category: '2022-ldc_report', event_label: 'Section 1', transport_type: 'beacon' });
-      }
+      track('Scroll', 'Section 1');
     }
-  }, [section1Progress, section1Seen]);
+  }, [section1Progress, section1Seen, track]);
 
   useEffect(() => {
     if (section2Progress === 100 && section2Seen === false) {
       setSection2Seen(true);
-      if (typeof analytics !== 'undefined') {
-        analytics('event', 'Scroll', { event_category: '2022-ldc_report', event_label: 'Section 2', transport_type: 'beacon' });
-      }
+      track('Scroll', 'Section 2');
     }
-  }, [section2Progress, section2Seen]);
+  }, [section2Progress, section2Seen, track]);
 
   useEffect(() => {
     if (section3Progress === 100 && section3Seen === false) {
       setSection3Seen(true);
-      if (typeof analytics !== 'undefined') {
-        analytics('event', 'Scroll', { event_category: '2022-ldc_report', event_label: 'Section 3', transport_type: 'beacon' });
-      }
+      track('Scroll', 'Section 3');
     }
-  }, [section3Progress, section3Seen]);
-
-  const track = (name) => {
-    if (typeof analytics !== 'undefined') {
-      analytics('event', 'Navigation Click', {
-        event_category: '2022-ldc_report',
-        event_label: name,
-        transport_type: 'beacon'
-      });
-    }
-  };
+  }, [section3Progress, section3Seen, track]);
 
   const anchorClick = (target, name) => {
-    track(name);
+    track('Anchor', name);
     setTimeout(() => {
       scrollIntoView(appRef.current.querySelector(target), {
         align: {
@@ -297,11 +293,11 @@ function App() {
                   <br />
                   »
                   {' '}
-                  <a href="https://storage.unctad.org/2022-ldc_report/assets/img/2022-ldc_report_ldc_map.svg" target="_blank" onClick={(event) => track(event.target.href)} rel="noreferrer">Download LDC map (.svg)</a>
+                  <a href="https://storage.unctad.org/2022-ldc_report/assets/img/2022-ldc_report_ldc_map.svg" target="_blank" onClick={(event) => track('Anchor', event.target.href)} rel="noreferrer">Download LDC map (.svg)</a>
                   <br />
                   »
                   {' '}
-                  <a href="https://storage.unctad.org/2022-ldc_report/assets/img/2022-ldc_report_ldc_map.png" target="_blank" onClick={(event) => track(event.target.href)} rel="noreferrer">Download LDC map (.png)</a>
+                  <a href="https://storage.unctad.org/2022-ldc_report/assets/img/2022-ldc_report_ldc_map.png" target="_blank" onClick={(event) => track('Anchor', event.target.href)} rel="noreferrer">Download LDC map (.png)</a>
                 </p>
               </div>
             </div>
