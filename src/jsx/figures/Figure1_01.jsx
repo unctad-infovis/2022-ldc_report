@@ -8,7 +8,7 @@ import { transpose } from 'csv-transpose';
 import CSVtoJSON from '../helpers/CSVtoJSON.js';
 import ChartColumn from '../charts/ChartColumn.jsx';
 
-function Figure1_01({ standalone }) {
+function Figure1_01({ standalone = true }) {
   // Data states.
   const [dataFigure, setDataFigure] = useState(false);
 
@@ -59,8 +59,4 @@ function Figure1_01({ standalone }) {
 Figure1_01.propTypes = {
   standalone: PropTypes.bool
 };
-Figure1_01.defaultProps = {
-  standalone: true
-};
-
 export default Figure1_01;

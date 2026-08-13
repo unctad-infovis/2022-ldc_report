@@ -6,7 +6,7 @@ import '../../styles/chart_styles.less';
 import CSVtoJSON from '../helpers/CSVtoJSON.js';
 import ChartLine from '../charts/ChartLine.jsx';
 
-function Figure2_03b({ standalone }) {
+function Figure2_03b({ standalone = true }) {
   // Data states.
   const [dataFigure, setDataFigure] = useState(false);
 
@@ -62,8 +62,4 @@ function Figure2_03b({ standalone }) {
 Figure2_03b.propTypes = {
   standalone: PropTypes.bool
 };
-Figure2_03b.defaultProps = {
-  standalone: true
-};
-
 export default Figure2_03b;

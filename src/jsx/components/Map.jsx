@@ -13,7 +13,7 @@ import * as d3 from 'd3';
 
 import Versor from '../helpers/Versor.js';
 
-function Map({ appID }) {
+function Map({ appID = '#app-root-2022-ldc_report_figure_globe' }) {
   // const countries = useMemo(() => ({
   //   '024': 'Angola', 204: 'Benin', 854: 'Burkina Faso', 108: 'Burundi', 140: 'Central African Republic', 148: 'Chad', 174: 'Comoros', 180: 'Congo, Dem. Rep. of the', 262: 'Djibouti', 232: 'Eritrea', 231: 'Ethiopia', 270: 'Gambia', 324: 'Guinea', 624: 'Guinea-Bissau', 426: 'Lesotho', 430: 'Liberia', 450: 'Madagascar', 454: 'Malawi', 466: 'Mali', 478: 'Mauritania', 508: 'Mozambique', 562: 'Niger', 646: 'Rwanda', 678: 'Sao Tome and Principe', 686: 'Senegal', 694: 'Sierra Leone', 706: 'Somalia', 728: 'South Sudan', 729: 'Sudan', 768: 'Togo', 800: 'Uganda', 834: 'Tanzania, United Republic of', 894: 'Zambia', '004': 'Afghanistan', '050': 'Bangladesh', '064': 'Bhutan', 116: 'Cambodia', 418: 'Lao People\'s Dem. Rep.', 104: 'Myanmar', 524: 'Nepal', 626: 'Timor-Leste', 887: 'Yemen', 296: 'Kiribati', '090': 'Solomon Islands', 798: 'Tuvalu', 332: 'Haiti'
   // }), []);
@@ -145,8 +145,4 @@ function Map({ appID }) {
 Map.propTypes = {
   appID: PropTypes.string
 };
-Map.defaultProps = {
-  appID: '#app-root-2022-ldc_report_figure_globe'
-};
-
 export default memo(Map);

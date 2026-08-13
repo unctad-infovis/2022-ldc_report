@@ -6,7 +6,7 @@ import scrollIntoView from 'scroll-into-view';
 
 
 function ProgressIndicator({
-  appRef, section1Progress, section2Progress, section3Progress
+  appRef, section1Progress = 0, section2Progress = 0, section3Progress = 0
 }) {
   const analytics = window.gtag || undefined;
   const track = useCallback((label_event = false, value_event = false) => {
@@ -68,12 +68,6 @@ ProgressIndicator.propTypes = {
   section1Progress: PropTypes.number,
   section2Progress: PropTypes.number,
   section3Progress: PropTypes.number
-};
-
-ProgressIndicator.defaultProps = {
-  section1Progress: 0,
-  section2Progress: 0,
-  section3Progress: 0
 };
 
 export default memo(ProgressIndicator);

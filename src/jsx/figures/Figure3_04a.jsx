@@ -6,7 +6,7 @@ import '../../styles/chart_styles.less';
 import CSVtoJSON from '../helpers/CSVtoJSON.js';
 import ChartPie from '../charts/ChartPie.jsx';
 
-function Figure3_04a({ standalone }) {
+function Figure3_04a({ standalone = true }) {
   // Data states.
   const [dataFigure, setDataFigure] = useState(false);
 
@@ -97,8 +97,4 @@ function Figure3_04a({ standalone }) {
 Figure3_04a.propTypes = {
   standalone: PropTypes.bool
 };
-Figure3_04a.defaultProps = {
-  standalone: true
-};
-
 export default Figure3_04a;

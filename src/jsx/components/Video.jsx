@@ -57,8 +57,4 @@ Video.propTypes = {
 
 };
 
-Video.defaultProps = {
-
-};
-
 export default memo(Video);
