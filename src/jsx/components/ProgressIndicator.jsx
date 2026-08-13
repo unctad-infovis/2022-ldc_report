@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 // https://www.npmjs.com/package/scroll-into-view
 import scrollIntoView from 'scroll-into-view';
 
-
 function ProgressIndicator({
   appRef, section1Progress = 0, section2Progress = 0, section3Progress = 0
 }) {
