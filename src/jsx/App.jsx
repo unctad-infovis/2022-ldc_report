@@ -4,7 +4,7 @@ import React, {
 
 // https://www.npmjs.com/package/react-is-visible
 import 'intersection-observer';
-import IsVisible from 'react-is-visible';
+import { useIsVisible } from 'react-is-visible';
 
 // https://www.npmjs.com/package/scroll-into-view
 import scrollIntoView from 'scroll-into-view';
@@ -25,6 +25,26 @@ import Figure203b from './figures/Figure2_03b.jsx';
 import Figure304a from './figures/Figure3_04a.jsx';
 
 function App() {
+  const isVisibleRef1 = useRef();
+  const isVisible1 = useIsVisible(isVisibleRef1, { once: true });
+  const isVisibleRef2 = useRef();
+  const isVisible2 = useIsVisible(isVisibleRef2, { once: true });
+  const isVisibleRef3 = useRef();
+  const isVisible3 = useIsVisible(isVisibleRef3, { once: true });
+  const isVisibleRef4 = useRef();
+  const isVisible4 = useIsVisible(isVisibleRef4, { once: true });
+  const isVisibleRef5 = useRef();
+  const isVisible5 = useIsVisible(isVisibleRef5, { once: true });
+  const isVisibleRef6 = useRef();
+  const isVisible6 = useIsVisible(isVisibleRef6, { once: true });
+  const isVisibleRef7 = useRef();
+  const isVisible7 = useIsVisible(isVisibleRef7, { once: true });
+  const isVisibleRef8 = useRef();
+  const isVisible8 = useIsVisible(isVisibleRef8, { once: true });
+  const isVisibleRef9 = useRef();
+  const isVisible9 = useIsVisible(isVisibleRef9, { once: true });
+  const isVisibleRef10 = useRef();
+  const isVisible10 = useIsVisible(isVisibleRef10, { once: true });
   const appRef = useRef();
   const section1 = useRef();
   const section2 = useRef();
@@ -119,28 +139,20 @@ function App() {
             »
             {' '}
             <button className="ldc_button" type="button" onClick={() => anchorClick('.section_4_container', 'LDC facts')}>Learn more about LDCs</button>
-            <IsVisible once>
-              {(isVisible) => (
-                <p className="ingress">
-                  UNCTAD’s Least Developed Countries Report published on 3 November 2022 says
-                  {' '}
-                  <span className={`highlight ${(isVisible) ? 'visible' : ''}`}>LDCs are the example against which history will judge how effectively the world makes a just low-carbon transition</span>
-                  , while considering development needs and countries’ different obligations and capacities to fight climate change.
-                </p>
-              )}
-            </IsVisible>
+            <p ref={isVisibleRef1} className="ingress">
+              UNCTAD’s Least Developed Countries Report published on 3 November 2022 says
+              {' '}
+              <span className={`highlight ${(isVisible1) ? 'visible' : ''}`}>LDCs are the example against which history will judge how effectively the world makes a just low-carbon transition</span>
+              , while considering development needs and countries’ different obligations and capacities to fight climate change.
+            </p>
             <p className="ingress">The world’s 46 LDCs, home to about 1.1 billion people, have contributed minimally to CO2 emissions. In 2019 they accounted for less than 4% of total world greenhouse gas emissions. Yet over the last 50 years, 69% of worldwide deaths caused by climate-related disasters occurred in LDCs.</p>
-            <IsVisible once>
-              {(isVisible) => (
-                <p className="ingress">
-                  International support for this group of the world’s
-                  {' '}
-                  <span className={`highlight ${(isVisible) ? 'visible' : ''}`}>most vulnerable economies</span>
-                  {' '}
-                  is critical to address challenges that threaten their development, limit their participation in global trade and make them pay a disproportionately high price in addressing climate change.
-                </p>
-              )}
-            </IsVisible>
+            <p ref={isVisibleRef2} className="ingress">
+              International support for this group of the world’s
+              {' '}
+              <span className={`highlight ${(isVisible2) ? 'visible' : ''}`}>most vulnerable economies</span>
+              {' '}
+              is critical to address challenges that threaten their development, limit their participation in global trade and make them pay a disproportionately high price in addressing climate change.
+            </p>
           </div>
         </div>
         <div className="right_column">
@@ -161,25 +173,17 @@ function App() {
                   {' '}
                   emissions and are often inputs to carbon-intensive global value chains including metal products, cement, fertilizers or electricity.
                 </p>
-                <IsVisible once>
-                  {(isVisible) => (
-                    <p>
-                      <span className={`highlight ${(isVisible) ? 'visible' : ''}`}>Between 2018 and 2020, some 80% of the LDCs were classified as commodity-dependent</span>
-                      , meaning more than 60% of their merchandise exports consisted of primary products. In the global low-carbon transition, these countries could face severe fiscal constraints and loss of economic output should the extraction of such commodities suffer a steep cutback.
-                    </p>
-                  )}
-                </IsVisible>
-                <IsVisible once>
-                  {(isVisible) => (
-                    <p>
-                      The vulnerability caused by LDCs’ narrow export bases and high dependence on food imports has been compounded by the impacts of the war in Ukraine on global markets and the COVID-19 pandemic,
-                      {' '}
-                      <span className={`highlight ${(isVisible) ? 'visible' : ''}`}>which pushed an additional 32 million people in LDCs into extreme poverty</span>
-                      {' '}
-                      (living on less than $1.90 a day) in 2020 alone.
-                    </p>
-                  )}
-                </IsVisible>
+                <p ref={isVisibleRef3}>
+                  <span className={`highlight ${(isVisible3) ? 'visible' : ''}`}>Between 2018 and 2020, some 80% of the LDCs were classified as commodity-dependent</span>
+                  , meaning more than 60% of their merchandise exports consisted of primary products. In the global low-carbon transition, these countries could face severe fiscal constraints and loss of economic output should the extraction of such commodities suffer a steep cutback.
+                </p>
+                <p ref={isVisibleRef4}>
+                  The vulnerability caused by LDCs’ narrow export bases and high dependence on food imports has been compounded by the impacts of the war in Ukraine on global markets and the COVID-19 pandemic,
+                  {' '}
+                  <span className={`highlight ${(isVisible4) ? 'visible' : ''}`}>which pushed an additional 32 million people in LDCs into extreme poverty</span>
+                  {' '}
+                  (living on less than $1.90 a day) in 2020 alone.
+                </p>
                 <p>While boosting LDCs’ export capacity remains critical, UNCTAD urges these countries to use sustainable production methods and invest more in building new productive capacities and expanding their existing ones, especially in low-carbon activities. </p>
               </div>
             </div>
@@ -194,27 +198,19 @@ function App() {
           <div className="two_column_layout">
             <div className="left_column">
               <div className="text_container">
-                <IsVisible once>
-                  {(isVisible) => (
-                    <p>
-                      <span className={`highlight ${(isVisible) ? 'visible' : ''}`}>LDCs are marginalized in global trade</span>
-                      {' '}
-                      and now face additional headwinds because of the environmental policies of their trade partners.
-                    </p>
-                  )}
-                </IsVisible>
+                <p ref={isVisibleRef5}>
+                  <span className={`highlight ${(isVisible5) ? 'visible' : ''}`}>LDCs are marginalized in global trade</span>
+                  {' '}
+                  and now face additional headwinds because of the environmental policies of their trade partners.
+                </p>
                 <p>Any trade partners’ policies targeting the carbon emissions generated in the production of exported goods could hit LDC exports, even indirectly if LDCs were to be exempted from such policies.</p>
-                <IsVisible once>
-                  {(isVisible) => (
-                    <p>
-                      The policies could have serious consequences if they
-                      {' '}
-                      <span className={`highlight ${(isVisible) ? 'visible' : ''}`}>were to provide an incentive to displacing polluting industries out of developed countries and into LDCs</span>
-                      {' '}
-                      as a way for the former countries to meet their climate commitments.
-                    </p>
-                  )}
-                </IsVisible>
+                <p ref={isVisibleRef6}>
+                  The policies could have serious consequences if they
+                  {' '}
+                  <span className={`highlight ${(isVisible6) ? 'visible' : ''}`}>were to provide an incentive to displacing polluting industries out of developed countries and into LDCs</span>
+                  {' '}
+                  as a way for the former countries to meet their climate commitments.
+                </p>
               </div>
             </div>
             <div className="right_column">
@@ -229,36 +225,24 @@ function App() {
             <div className="left_column">
               <div className="text_container">
                 <p>LDCs make up 22% of countries with the most recurring appeals for funds in reaction to extreme weather crises.</p>
-                <IsVisible once>
-                  {(isVisible) => (
-                    <p>
-                      Despite an urgent plea from climate-vulnerable countries
-                      {' '}
-                      <span className={`highlight ${(isVisible) ? 'visible' : ''}`}>there remains no international agreement</span>
-                      {' '}
-                      on financing costs related to loss and damage from fast-onset events related to climate change.
-                    </p>
-                  )}
-                </IsVisible>
-                <IsVisible once>
-                  {(isVisible) => (
-                    <p>
-                      Climate risks are aggravated by
-                      {' '}
-                      <span className={`highlight ${(isVisible) ? 'visible' : ''}`}>the failure of developed countries to meet the annual $100 billion goal</span>
-                      {' '}
-                      in climate finance they originally promised to achieve by 2020 to support developing nations to adapt to the climate crisis.
-                    </p>
-                  )}
-                </IsVisible>
-                <IsVisible once>
-                  {(isVisible) => (
-                    <p>
-                      <span className={`highlight ${(isVisible) ? 'visible' : ''}`}>Climate adaptation has received far less international support than mitigation</span>
-                      , not only in terms of financing, but also in terms of technology development and transfer, capacity development and technical assistance.
-                    </p>
-                  )}
-                </IsVisible>
+                <p ref={isVisibleRef7}>
+                  Despite an urgent plea from climate-vulnerable countries
+                  {' '}
+                  <span className={`highlight ${(isVisible7) ? 'visible' : ''}`}>there remains no international agreement</span>
+                  {' '}
+                  on financing costs related to loss and damage from fast-onset events related to climate change.
+                </p>
+                <p ref={isVisibleRef8}>
+                  Climate risks are aggravated by
+                  {' '}
+                  <span className={`highlight ${(isVisible8) ? 'visible' : ''}`}>the failure of developed countries to meet the annual $100 billion goal</span>
+                  {' '}
+                  in climate finance they originally promised to achieve by 2020 to support developing nations to adapt to the climate crisis.
+                </p>
+                <p ref={isVisibleRef9}>
+                  <span className={`highlight ${(isVisible9) ? 'visible' : ''}`}>Climate adaptation has received far less international support than mitigation</span>
+                  , not only in terms of financing, but also in terms of technology development and transfer, capacity development and technical assistance.
+                </p>
               </div>
             </div>
             <div className="right_column">
@@ -274,14 +258,10 @@ function App() {
             <div className="left_column">
               <div className="text_container">
                 <h3>Where are LDCs located?</h3>
-                <IsVisible once>
-                  {(isVisible) => (
-                    <p>
-                      The UN established the LDC category 51 years ago. The list of LDCs has expanded from an initial 25 countries in 1971, peaking at 52 in 1991, and stands at 46 today, with only six countries having graduated – stopped being an LDC – to date.
-                      <span className={`highlight ${(isVisible) ? 'visible' : ''}`} />
-                    </p>
-                  )}
-                </IsVisible>
+                <p ref={isVisibleRef10}>
+                  The UN established the LDC category 51 years ago. The list of LDCs has expanded from an initial 25 countries in 1971, peaking at 52 in 1991, and stands at 46 today, with only six countries having graduated – stopped being an LDC – to date.
+                  <span className={`highlight ${(isVisible10) ? 'visible' : ''}`} />
+                </p>
                 <p>They are distributed among the following regions:</p>
                 <ul>
                   <li>Africa (33): Angola, Benin, Burkina Faso, Burundi, Central African Republic, Chad, Comoros, Democratic Republic of the Congo, Djibouti, Eritrea, Ethiopia, Gambia, Guinea, Guinea-Bissau, Lesotho, Liberia, Madagascar, Malawi, Mali, Mauritania, Mozambique, Niger, Rwanda, Sao Tome and Principe, Senegal, Sierra Leone, Somalia, South Sudan, Sudan, Togo, Uganda, United Republic of Tanzania and Zambia.</li>
