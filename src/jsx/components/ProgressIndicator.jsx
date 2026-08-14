@@ -1,4 +1,4 @@
-import React, { /* useState, useEffect, useRef */ memo } from 'react';
+import React, { useCallback, /* useState, useEffect, useRef */ memo } from 'react';
 import PropTypes from 'prop-types';
 
 // https://www.npmjs.com/package/scroll-into-view
